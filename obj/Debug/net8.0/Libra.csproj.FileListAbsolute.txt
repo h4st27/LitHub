@@ -139,3 +139,14 @@ D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\HealthChecks.UI.Client.dl
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\HealthChecks.UI.InMemory.Storage.dll
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\HealthChecks.UI.PostgreSQL.Storage.dll
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Serilog.Sinks.Seq.dll

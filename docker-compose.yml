@@ -1,0 +1,46 @@
+version: '2.1'
+
+services:
+
+  libra-api:
+    image: webapi:latest  
+    container_name: libra-api
+    build:
+      context: . 
+      dockerfile: ./Dockerfile
+    ports:
+      - "5000:80" 
+      - "5001:443" 
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    depends_on:
+      - postgres
+      - libra-seq
+
+  postgres:
+    image: postgres:latest
+    container_name: libra-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres  
+      POSTGRES_PASSWORD: 2204 
+      POSTGRES_DB: libra  
+    ports:
+      - "5432:5432" 
+    volumes:
+      - pg_data:/var/lib/postgresql/data 
+
+  libra-seq:
+    image: datalust/seq:latest 
+    container_name: libra-seq
+    environment:
+      ACCEPT_EULA: Y  
+    ports:
+      - "5341:5341" 
+      - "8081:80"
+    volumes:
+      - seq_data:/data 
+
+volumes:
+  pg_data: 
+  seq_data:  

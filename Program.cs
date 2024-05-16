@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using System.Text;
 
 namespace Libra
@@ -71,6 +72,9 @@ namespace Libra
                     ValidateIssuerSigningKey = false,
                 };
             });
+
+            builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
+
             builder.Services.AddAuthorization();
             builder.Services.AddSwaggerGen(c =>
             {
@@ -145,6 +149,8 @@ namespace Libra
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.UseStaticFiles();
+            app.UseSerilogRequestLogging();
 
             app.MapControllers();
 
