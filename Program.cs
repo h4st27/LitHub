@@ -1,96 +1,67 @@
-﻿using System.Collections;
-using System.Numerics;
-using System.Runtime.Serialization;
-using System.Timers;
-using System.Xml.Linq;
-
-class Program
+﻿class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        DemoCollections();
-        DemoTimer();
-        DemoRuntimeSerialization();
-        DemoNumerics();
-        DemoXML();
+        ThreadDemo();
+        AsyncAwaitDemo();
+        GetDataFromApiAsyncDemo();
     }
-    //System.Collections
-    static void DemoCollections()
+    static void ThreadDemo()
     {
-        ArrayList list = new ArrayList();
-        list.Add("My");
-        list.Add("Name");
-        list.Add("Is");
-        list.Add("Yaroslav");
+        Console.WriteLine("ThreadDemo is on stack");
 
-        foreach (var item in list)
+        Thread thread1 = new Thread(() =>
         {
-            Console.WriteLine(item);
-        }
-    }
-    //System.Timers
-    static void DemoTimer() {
+            Thread.Sleep(2000);
+            Console.WriteLine("Thread first closed (2000ms sleep)");
+        });
 
-        System.Timers.Timer timer = new System.Timers.Timer();
-        timer.Interval = 1000;
-        timer.Elapsed += TimerElapsed;
-        timer.Start();
-        Console.WriteLine("Timer started. Press Enter to stop.");
-        Console.ReadLine();
-        timer.Stop();
-        static void TimerElapsed(object sender, ElapsedEventArgs e)
+        Thread thread2 = new Thread(() =>
         {
-            Console.WriteLine("Timer count: " + DateTime.Now);
-        }
-    }
-    //System.Xml.Linq
-    static void DemoXML()
-    {
-        XDocument doc = new XDocument(
-                   new XElement("Users",
-                       new XElement("user",
-                           new XAttribute("id", "1"),
-                           new XElement("name", "Yarosalv"),
-                           new XElement("surname", "Popov")
-                       ),
-                       new XElement("user",
-                           new XAttribute("id", "2"),
-                           new XElement("name", "Alina"),
-                           new XElement("surname", "Khudolii")
-                       )
-                   )
-               );
-        Console.WriteLine(doc);
-    }
-    //System.Runtime.Serialization
-    static void DemoRuntimeSerialization()
-    {
-        Person person = new Person { Name = "Yaroslav", Age = 19 };
+            Thread.Sleep(1000);
+            Console.WriteLine("Thread first closed (1000ms sleep)");
+        });
 
-        var serializer = new DataContractSerializer(typeof(Person));
-        using (var stream = new MemoryStream())
+        thread1.Start();
+        thread2.Start();
+
+        Console.WriteLine("ThreadDemo is out of stack");
+    }
+    static async void AsyncAwaitDemo()
+    {
+        Console.WriteLine("AsyncAwaitDemo is on stack");
+
+        await Task.Run(async () =>
         {
-            serializer.WriteObject(stream, person);
-            stream.Position = 0;
-
-            var deserializedPerson = serializer.ReadObject(stream) as Person;
-            Console.WriteLine($"Deserialized: {deserializedPerson.Name}, {deserializedPerson.Age} years");
-        }
+            Console.WriteLine("Start of first async operation (wait 3000ms)");
+            await Task.Delay(3000);
+            Console.WriteLine("End of first async operation");
+        });
+        await Task.Run(async () =>
+        {
+            Console.WriteLine("Start of second async operation (wait 2000ms)");
+            await Task.Delay(2000);
+            Console.WriteLine("End of second async operation");
+        });
+        Console.WriteLine("AsyncAwaitDemo is out of stack");
     }
-    //System.Numerics
-    static void DemoNumerics()
+    static async Task GetDataFromApiAsyncDemo()
     {
-        BigInteger bigNumber = BigInteger.Parse("1234567890123456789012345678901234567890");
-        Console.WriteLine($"Big int: {bigNumber}");
+        Console.WriteLine("GetDataFromApiAsyncDemo is on stack");
+
+        HttpClient client = new HttpClient();
+        string apiUrl = "https://jsonplaceholder.typicode.com/posts/1";
+        HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+        if (response.IsSuccessStatusCode)
+        {
+            string data = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Data: {data}");
+        }
+        else
+        {
+            Console.WriteLine("Error");
+        }
+        Console.WriteLine("GetDataFromApiAsyncDemo is out of stack");
     }
-}
-
-[DataContract]
-public class Person
-{
-    [DataMember]
-    public string Name { get; set; }
-
-    [DataMember]
-    public int Age { get; set; }
 }
