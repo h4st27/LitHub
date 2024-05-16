@@ -89,6 +89,7 @@ namespace MyApp.Controllers
             try
             {
                 var response = new BaseResponse<string>();
+                response.Data = wordDTO.Word.Trim().ToLower();
                 if (!_wordsService.ValidateWord(wordDTO.Word))
                 {
                     response.Message = "Invalid data";
@@ -117,6 +118,7 @@ namespace MyApp.Controllers
             try
             {
                 var response = new BaseResponse<string>();
+                response.Data = word.Trim().ToLower();
                 if (!_wordsService.ValidateWord(word))
                 {
                     response.Message = "Invalid data";
@@ -145,10 +147,12 @@ namespace MyApp.Controllers
             try
             {
                 var response = new BaseResponse<string>();
+                response.Data = wordDTO.Word.Trim().ToLower();
                 if (!_wordsService.ValidateWord(wordDTO.Word))
                 {
                     response.Message = "Invalid data";
                     response.StatusCode = HttpStatusCode.BadRequest;
+                    response.Data = wordDTO.Word.Trim().ToLower();
                     return BadRequest(response);
                 }
                 if (_wordsService.ReplaceWord(oldWord, wordDTO.Word))
@@ -159,6 +163,7 @@ namespace MyApp.Controllers
                 }
                 response.Message = $"There is no '{oldWord.Trim().ToLower()}' in list.";
                 response.StatusCode = HttpStatusCode.NotFound;
+                response.Data = oldWord.Trim().ToLower();
                 return NotFound(response);
             }
             catch
