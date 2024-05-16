@@ -1,90 +1,96 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Collections;
+using System.Numerics;
+using System.Runtime.Serialization;
+using System.Timers;
+using System.Xml.Linq;
 
 class Program
 {
-    static string fileName = "LoremIpsum.txt";
     static void Main()
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
-
-        do
-        {
-            Console.WriteLine("Menu:");
-            Console.WriteLine("1. Word Count");
-            Console.WriteLine("2. Calc Expression");
-            Console.WriteLine("0. Exit");
-
-            Console.Write("Input:");
-            if (int.TryParse(Console.ReadLine(), out int choice))
-            {
-                switch (choice)
-                {
-                    case 1:
-                        GetWordCount();
-                        break;
-
-                    case 2:
-                        EvaluateMathExpression();
-                        break;
-
-                    case 0:
-                        Console.WriteLine("Have a nice day. Bye!");
-                        return;
-
-                    default:
-                        Console.WriteLine("Wrong input.");
-                        break;
-                }
-            }
-            else
-            {
-                Console.WriteLine("Wrong input.");
-            }
-
-            Console.WriteLine();
-        } while (true);
+        DemoCollections();
+        DemoTimer();
+        DemoRuntimeSerialization();
+        DemoNumerics();
+        DemoXML();
     }
-
-    //1
-    static void EvaluateMathExpression()
+    //System.Collections
+    static void DemoCollections()
     {
-        System.Data.DataTable table = new System.Data.DataTable();
-        Console.Write("Input math expr:");
+        ArrayList list = new ArrayList();
+        list.Add("My");
+        list.Add("Name");
+        list.Add("Is");
+        list.Add("Yaroslav");
 
-        string? expression = Console.ReadLine();
-
-        try
+        foreach (var item in list)
         {
-            double result = Convert.ToDouble(table.Compute(expression, string.Empty));
-            Console.WriteLine($"Result: {result}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Something is wrong: {ex.Message}");
+            Console.WriteLine(item);
         }
     }
+    //System.Timers
+    static void DemoTimer() {
 
-    //2
-    static void GetWordCount()
+        System.Timers.Timer timer = new System.Timers.Timer();
+        timer.Interval = 1000;
+        timer.Elapsed += TimerElapsed;
+        timer.Start();
+        Console.WriteLine("Timer started. Press Enter to stop.");
+        Console.ReadLine();
+        timer.Stop();
+        static void TimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            Console.WriteLine("Timer count: " + DateTime.Now);
+        }
+    }
+    //System.Xml.Linq
+    static void DemoXML()
     {
-        Console.Write("Write text:");
-        string? text = Console.ReadLine();
-
-        MatchCollection matches = Regex.Matches(text, "[a-zA-Z0-9]");
-        string[] words;
-
-        if (matches.Count() > 0) {
-            words = text.Split(new char[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
-            Console.WriteLine($"WC:{words.Length}");
-            return;
-        }
-
-        string currentDirectory = Directory.GetCurrentDirectory();
-        string filePath = Path.Combine(currentDirectory, fileName);
-        string content = File.ReadAllText(filePath);
-        words = content.Split(new char[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
-
-        Console.WriteLine($"Default content: {content}");
-        Console.WriteLine($"WC:{words.Length}");
+        XDocument doc = new XDocument(
+                   new XElement("Users",
+                       new XElement("user",
+                           new XAttribute("id", "1"),
+                           new XElement("name", "Yarosalv"),
+                           new XElement("surname", "Popov")
+                       ),
+                       new XElement("user",
+                           new XAttribute("id", "2"),
+                           new XElement("name", "Alina"),
+                           new XElement("surname", "Khudolii")
+                       )
+                   )
+               );
+        Console.WriteLine(doc);
     }
+    //System.Runtime.Serialization
+    static void DemoRuntimeSerialization()
+    {
+        Person person = new Person { Name = "Yaroslav", Age = 19 };
+
+        var serializer = new DataContractSerializer(typeof(Person));
+        using (var stream = new MemoryStream())
+        {
+            serializer.WriteObject(stream, person);
+            stream.Position = 0;
+
+            var deserializedPerson = serializer.ReadObject(stream) as Person;
+            Console.WriteLine($"Deserialized: {deserializedPerson.Name}, {deserializedPerson.Age} years");
+        }
+    }
+    //System.Numerics
+    static void DemoNumerics()
+    {
+        BigInteger bigNumber = BigInteger.Parse("1234567890123456789012345678901234567890");
+        Console.WriteLine($"Big int: {bigNumber}");
+    }
+}
+
+[DataContract]
+public class Person
+{
+    [DataMember]
+    public string Name { get; set; }
+
+    [DataMember]
+    public int Age { get; set; }
 }
