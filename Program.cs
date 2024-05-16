@@ -21,7 +21,7 @@ class Program
         list.Add("My");
         list.Add("Name");
         list.Add("Is");
-        list.Add("Yaroslav");
+        list.Add("Oleksandr");
 
         foreach (var item in list)
         {
@@ -50,13 +50,13 @@ class Program
                    new XElement("Users",
                        new XElement("user",
                            new XAttribute("id", "1"),
-                           new XElement("name", "Yarosalv"),
-                           new XElement("surname", "Popov")
+                           new XElement("name", "Oleksandr"),
+                           new XElement("surname", "Mykhalchenko")
                        ),
                        new XElement("user",
                            new XAttribute("id", "2"),
-                           new XElement("name", "Alina"),
-                           new XElement("surname", "Khudolii")
+                           new XElement("name", "Eren"),
+                           new XElement("surname", "Yeager")
                        )
                    )
                );
@@ -65,7 +65,7 @@ class Program
     //System.Runtime.Serialization
     static void DemoRuntimeSerialization()
     {
-        Person person = new Person { Name = "Yaroslav", Age = 19 };
+        Person person = new Person { Name = "Oleksandr", Age = 20 };
 
         var serializer = new DataContractSerializer(typeof(Person));
         using (var stream = new MemoryStream())
