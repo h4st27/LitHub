@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Currency Rates</h1>
+<ul id="currencyList"></ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.5/signalr.min.js"></script>
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/currencyHub").build();
+
+    connection.on("ReceiveCurrencyData", function (currencyData) {
+        console.log(currencyData.data);
+        document.getElementById("currencyList").innerHTML = "";
+        for (var key in currencyData.data) {
+            var listItem = document.createElement("li");
+            listItem.textContent = key + ": " + currencyData.data[key].value;
+            document.getElementById("currencyList").appendChild(listItem);
+        }
+    });
+
+    connection.start().then(function () {
+        console.log("Connection established");
+        connection.invoke("GetCurrencyData").catch(function (err) {
+            return console.error(err.toString());
+        });
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+</script>
