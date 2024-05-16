@@ -3,6 +3,7 @@ using MyApp.DTOs;
 using MyApp.Models;
 using MyApp.Models.ResponseModels;
 using MyApp.Services.ApiClient;
+using MyApp.Services.JokesService;
 using MyApp.Services.WordsService;
 using System.Net;
 
@@ -10,29 +11,28 @@ namespace MyApp.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WordsController : ControllerBase
+    public class JokesController : ControllerBase
     {
         private readonly IApiClient _apiClient;
         private readonly IConfiguration _configuration;
-        private readonly IWordsService _wordsService;
-        public WordsController(IApiClient apiClient, IConfiguration configuration, IWordsService wordsService )
+        private readonly IJokesService _jokesService;
+        public JokesController(IApiClient apiClient, IConfiguration configuration, IJokesService jokesService)
         {
             _apiClient = apiClient;
             _configuration = configuration;
-            _wordsService= wordsService; 
+            _jokesService= jokesService;
         }
 
-        [HttpGet("HomonymTo")]
-        public async Task<ActionResult> GetHomonyms(string wordToFind)
+        [HttpGet("Random")]
+        public async Task<ActionResult> GetRandomJoke()
         {
-            var response = new BaseResponse<HomonymsData>();
-            var word = new WordDto();
-            word.Word = wordToFind;
+            var response = new BaseResponse<JokeData>();
+            var joke = new JokeDto();
             try
             {
-                HomonymsData? apiData = await _apiClient.GetAsync<HomonymsData>($"https://api.api-ninjas.com/v1/thesaurus?word={word.Word}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
+                var apiData = await _apiClient.GetAsync<JokeData>($"https://api.api-ninjas.com/v1/chucknorris?&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
                 response.Data = apiData;
-                response.Message = $"Retrieved homonyms of word '{word.Word}'.";
+                response.Message = $"Your joke is '{joke.Joke}'.";
                 return Ok(response);
             }
             catch {
@@ -40,15 +40,20 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpGet("Random")]
-        public async Task<ActionResult> GetRandomWord()
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetJokeById(int id)
         {
             try
             {
                 var response = new BaseResponse<string>();
-                var word = _wordsService.GetRandomWord();
-                response.Data = word;
-                response.Message = $"Your word is '{word}'.";
+                var joke = _jokesService.GetJokeById(id);
+                response.Data = joke;
+                if (joke==null)
+                {
+                    response.Message = $"There is no such joke in list.";
+                    return NotFound(response);
+                }
+                response.Message = $"Your joke is '{joke}'.";
                 return Ok(response);
             }
             catch
@@ -58,14 +63,14 @@ namespace MyApp.Controllers
         }
 
         [HttpGet()]
-        public async Task<ActionResult> GetWord()
+        public async Task<ActionResult> GetJokes()
         {
             try
             {
                 var response = new BaseResponse<HashSet<string>>();
-                var words = _wordsService.RetrieveWords();
-                response.Data = words;
-                response.Message = $"Words retrieved.";
+                var jokes = _jokesService.RetrieveJokes();
+                response.Data = jokes;
+                response.Message = $"Jokes retrieved.";
                 return Ok(response);
             }
             catch
@@ -75,18 +80,18 @@ namespace MyApp.Controllers
         }
 
         [HttpPost()]
-        public async Task<ActionResult> PostWord([FromBody] WordDto word)
+        public async Task<ActionResult> PostWord([FromBody] JokeDto joke)
         {
             try
             {
                 var response = new BaseResponse<string>();
-                response.Data = word.Word;
-                if (_wordsService.AddWord(word.Word))
+                response.Data = joke.Joke;
+                if (_jokesService.AddJoke(joke.Joke))
                 {
-                    response.Message = "The word is successfully added.";
+                    response.Message = "The joke is successfully added.";
                     return Ok(response);
                 }
-                response.Message = "The word already exists.";
+                response.Message = "The joke already exists.";
                 return BadRequest(response);
             }
             catch
@@ -95,23 +100,22 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpDelete("{wordToFind}")]
-        public async Task<ActionResult> DeleteWord(string wordToFind)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteWord(int id)
         {
-            var word = new WordDto();
-            word.Word = wordToFind;
+            var joke = new JokeDto();
             try
             {
                 var response = new BaseResponse<string>();
-                response.Data = word.Word;
-                if (_wordsService.RemoveWord(word.Word))
+                joke.Joke = _jokesService.GetJokeById(id);
+                if (_jokesService.RemoveJoke(id))
                 {
-                    response.Message = $"The word '{word.Word}' is successfully deleted.";
-                    response.Data = word.Word;
+                    response.Message = $"The joke is successfully deleted.";
+                    response.Data = joke.Joke;
                     return (Ok(response));
                 }
-                response.Message = $"There is no '{word.Word}' in list.";
-                response.Data = word.Word;
+                response.Message = $"There is no such joke in list.";
+                response.Data = joke.Joke;
                 return NotFound(response);
 
             }
@@ -121,22 +125,19 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpPut("{wordToFind}")]
-        public async Task<ActionResult> ChangeWord(string wordToFind, [FromBody] WordDto word)
+        [HttpPut("{id}")]
+        public async Task<ActionResult> ChangeWord(int id, [FromBody] JokeDto joke)
         {
-            var oldWord = new WordDto();
-            oldWord.Word = wordToFind;
             try
             {
                 var response = new BaseResponse<string>();
-                response.Data = word.Word;
-                if (_wordsService.ReplaceWord(oldWord.Word, word.Word))
+                response.Data = joke.Joke;
+                if (_jokesService.ReplaceJoke(id, joke.Joke))
                 {
-                    response.Message = $"The word '{oldWord.Word}' is successfully changed to {word.Word}.";
+                    response.Message = $"The joke with id '{id}' is successfully changed to {joke.Joke}.";
                     return Ok(response);
                 }
-                response.Message = $"There is no '{oldWord.Word}' in list.";
-                response.Data = oldWord.Word;
+                response.Message = $"There is no such joke in list or already exists.";
                 return NotFound(response);
             }
             catch
