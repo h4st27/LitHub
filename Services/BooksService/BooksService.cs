@@ -9,9 +9,9 @@ namespace MyApp.Services.BooksService
         string pattern = "^[a-zA-Z]+$";
         static private List<string> books = new List<string>
         {
-            "beautiful", "happy", "exciting", "creative", "wonderful",
-            "amazing", "fantastic", "awesome", "brilliant", "joyful",
-            "lovely", "delightful", "fun", "inspiring", "peaceful"
+            "Harry Potter", "Lord of the Rings", "The Blade Itself", "Witcher", "It",
+            "If We Were Villains", "A Little Life", "The Little Prince", "Looking for Alaska", "Atomic Habits",
+            "Barbie", "Happy Place", "Be Happy", "Have a Good Time", "Everything I Know About Love"
         };
         public string GetRandomBook()
         {
