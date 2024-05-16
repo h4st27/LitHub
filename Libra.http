@@ -1,0 +1,6 @@
+@Libra_HostAddress = http://localhost:5168
+
+GET {{Libra_HostAddress}}/synonyms/
+Accept: application/json
+
+###
