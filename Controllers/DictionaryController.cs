@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace Libra.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("v{version:apiVersion}/[controller]")]
     public class DictionaryController : ControllerBase
     {
         private readonly IApiClient _apiClient;

@@ -39,3 +39,12 @@ D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\System.IdentityModel.Toke
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\ClosedXML.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Irony.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\XLParser.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

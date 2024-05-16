@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 namespace Libra.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("v{version:apiVersion}/[controller]")]
     public class WordsController : ControllerBase
     {
         private readonly IApiClient _apiClient;

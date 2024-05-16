@@ -9,7 +9,7 @@ using System.Net;
 namespace Libra.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("v{version:apiVersion}/[controller]")]
     public class AuthController : Controller
     {
         private readonly IUserService _userService;
