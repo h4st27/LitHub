@@ -1,6 +1,6 @@
 
 using MyApp.Services.ApiClient;
-using MyApp.Services.WordsService;
+using MyApp.Services.BooksService;
 
 namespace MyApp
 {
@@ -12,7 +12,7 @@ namespace MyApp
             builder.Services.AddHttpClient();
             builder.Services.AddCors();
             builder.Services.AddScoped<IApiClient,ApiClient>()
-                .AddScoped<IWordsService, WordsService>();
+                .AddScoped<IBooksService, BooksService>();
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

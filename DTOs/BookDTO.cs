@@ -2,9 +2,9 @@
 
 namespace MyApp.DTOs
 {
-    public class WordDTO
+    public class BookDTO
     {
         [Required]
-        public string Word { get; set; }
+        public string Book { get; set; }
     }
 }

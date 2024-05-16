@@ -1,5 +1,5 @@
 ﻿
 namespace MyApp.Models
 {
-    public record HomonymsData(string Word, List<string> Synonyms, List<string> Antonyms);
+    public record HomonymsData(string Book, List<string> Synonyms, List<string> Antonyms);
 }
