@@ -1,8 +1,8 @@
-﻿using MyApp.DTOs;
-using MyApp.Models;
-using MyApp.Services.WordsService;
+﻿using Libra.Dtos;
+using Libra.Models;
+using Libra.Services.WordsService;
 
-namespace MyApp.Services.DictionaryService
+namespace Libra.Services.DictionaryService
 {
     public class DictionaryService : IDictionaryService
     {

@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using MyApp.DTOs;
-using MyApp.Models;
-using MyApp.Models.ResponseModels;
-using MyApp.Services.ApiClient;
-using MyApp.Services.DictionaryService;
+using Libra.Dtos;
+using Libra.Models;
+using Libra.Models.ResponseModels;
+using Libra.Services.ApiClient;
+using Libra.Services.DictionaryService;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
-namespace MyApp.Controllers
+namespace Libra.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -21,7 +22,7 @@ namespace MyApp.Controllers
             _configuration = configuration;
             _dictionaryService = dictionaryService; 
         }
-        [HttpGet("{word}")]
+        [HttpGet("{word}"), Authorize]
         public async Task<ActionResult> GetDefinition(string word)
         {
             var wordToDefine = new WordDto() { Word = word };
@@ -38,7 +39,7 @@ namespace MyApp.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, "An error occurred while processing your request.");
             }
         }
-        [HttpGet()]
+        [HttpGet(), Authorize]
         public async Task<ActionResult> GetDictionary()
         {
             var response = new BaseResponse<List<DictionaryData>>();
@@ -53,7 +54,7 @@ namespace MyApp.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, "An error occurred while processing your request.");
             }
         }
-        [HttpPost("{word}")]
+        [HttpPost("{word}"), Authorize]
         public async Task<ActionResult> PostDefinition(string word)
         {
             var wordToDefine = new WordDto() { Word = word };
@@ -75,7 +76,7 @@ namespace MyApp.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, "An error occurred while processing your request.");
             }
         }
-        [HttpDelete("{word}")]
+        [HttpDelete("{word}"),Authorize]
         public async Task<ActionResult> DeleteDefinition(string word)
         {
             var wordToDefine = new WordDto() { Word = word };
@@ -97,7 +98,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpPut("{word}")]
+        [HttpPut("{word}"), Authorize]
         public async Task<ActionResult> UpdateWordDefinition(string word)
         {
             var wordToDefine = new WordDto() { Word = word };

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj": {}
+    "D:\\University\\Adaptive Web\\Proj\\Libra\\MyApp.csproj": {}
   },
   "projects": {
-    "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj": {
+    "D:\\University\\Adaptive Web\\Proj\\Libra\\MyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj",
+        "projectUniqueName": "D:\\University\\Adaptive Web\\Proj\\Libra\\MyApp.csproj",
         "projectName": "MyApp",
-        "projectPath": "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj",
+        "projectPath": "D:\\University\\Adaptive Web\\Proj\\Libra\\MyApp.csproj",
         "packagesPath": "C:\\Users\\Clemson\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\Adaptive Web\\Proj\\MyApp\\obj\\",
+        "outputPath": "D:\\University\\Adaptive Web\\Proj\\Libra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Clemson\\AppData\\Roaming\\NuGet\\NuGet.Config",

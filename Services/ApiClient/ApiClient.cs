@@ -1,4 +1,4 @@
-﻿namespace MyApp.Services.ApiClient
+﻿namespace Libra.Services.ApiClient
 {
     public class ApiClient: IApiClient
     {

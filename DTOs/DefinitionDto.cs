@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace MyApp.DTOs
+namespace Libra.Dtos
 {
     public class DefinitionDto
     {

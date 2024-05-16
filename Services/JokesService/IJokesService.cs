@@ -1,4 +1,4 @@
-﻿namespace MyApp.Services.JokesService
+﻿namespace Libra.Services.JokesService
 {
     public interface IJokesService
     {

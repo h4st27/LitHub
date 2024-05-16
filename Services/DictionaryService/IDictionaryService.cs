@@ -1,6 +1,6 @@
-﻿using MyApp.Models;
+﻿using Libra.Models;
 
-namespace MyApp.Services.DictionaryService
+namespace Libra.Services.DictionaryService
 {
     public interface IDictionaryService
     {

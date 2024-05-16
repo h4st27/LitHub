@@ -1,5 +1,5 @@
 ﻿
-namespace MyApp.Models
+namespace Libra.Models
 {
     public class DictionaryData()
     {

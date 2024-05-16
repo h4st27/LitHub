@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace MyApp.Models.ResponseModels
+namespace Libra.Models.ResponseModels
 {
     public class BaseResponse<T>
     {

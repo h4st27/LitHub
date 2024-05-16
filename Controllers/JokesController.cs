@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
-using MyApp.DTOs;
-using MyApp.Models;
-using MyApp.Models.ResponseModels;
-using MyApp.Services.ApiClient;
-using MyApp.Services.JokesService;
-using MyApp.Services.WordsService;
+using Libra.Dtos;
+using Libra.Models;
+using Libra.Models.ResponseModels;
+using Libra.Services.ApiClient;
+using Libra.Services.JokesService;
+using Libra.Services.WordsService;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
-namespace MyApp.Controllers
+namespace Libra.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -23,7 +24,7 @@ namespace MyApp.Controllers
             _jokesService= jokesService;
         }
 
-        [HttpGet("Random")]
+        [HttpGet("Random"), Authorize]
         public async Task<ActionResult> GetRandomJoke()
         {
             var response = new BaseResponse<JokeData>();
@@ -40,7 +41,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}"), Authorize]
         public async Task<ActionResult> GetJokeById(int id)
         {
             try
@@ -62,7 +63,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpGet()]
+        [HttpGet(), Authorize]
         public async Task<ActionResult> GetJokes()
         {
             try
@@ -79,7 +80,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpPost()]
+        [HttpPost(), Authorize]
         public async Task<ActionResult> PostWord([FromBody] JokeDto joke)
         {
             try
@@ -100,7 +101,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}"), Authorize]
         public async Task<ActionResult> DeleteWord(int id)
         {
             var joke = new JokeDto();
@@ -125,7 +126,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}"), Authorize]
         public async Task<ActionResult> ChangeWord(int id, [FromBody] JokeDto joke)
         {
             try

@@ -1,4 +1,4 @@
-﻿namespace MyApp.Services.WordsService
+﻿namespace Libra.Services.WordsService
 {
     public interface IWordsService
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace MyApp.DTOs
+namespace Libra.Dtos
 {
     public class JokeDto
     {

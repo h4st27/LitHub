@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
-using MyApp.DTOs;
-using MyApp.Models;
-using MyApp.Models.ResponseModels;
-using MyApp.Services.ApiClient;
-using MyApp.Services.WordsService;
+using Libra.Dtos;
+using Libra.Models;
+using Libra.Models.ResponseModels;
+using Libra.Services.ApiClient;
+using Libra.Services.WordsService;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
-namespace MyApp.Controllers
+namespace Libra.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -22,7 +24,7 @@ namespace MyApp.Controllers
             _wordsService= wordsService; 
         }
 
-        [HttpGet("HomonymTo")]
+        [HttpGet("HomonymTo"), Authorize]
         public async Task<ActionResult> GetHomonyms(string wordToFind)
         {
             var response = new BaseResponse<HomonymsData>();
@@ -40,7 +42,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpGet("Random")]
+        [HttpGet("Random"), Authorize]
         public async Task<ActionResult> GetRandomWord()
         {
             try
@@ -57,8 +59,8 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpGet()]
-        public async Task<ActionResult> GetWord()
+        [HttpGet(), Authorize]
+        public async Task<ActionResult> GetWords()
         {
             try
             {
@@ -74,7 +76,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpPost()]
+        [HttpPost(), Authorize]
         public async Task<ActionResult> PostWord([FromBody] WordDto word)
         {
             try
@@ -95,7 +97,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpDelete("{wordToFind}")]
+        [HttpDelete("{wordToFind}"), Authorize]
         public async Task<ActionResult> DeleteWord(string wordToFind)
         {
             var word = new WordDto();
@@ -121,7 +123,7 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpPut("{wordToFind}")]
+        [HttpPut("{wordToFind}"), Authorize]
         public async Task<ActionResult> ChangeWord(string wordToFind, [FromBody] WordDto word)
         {
             var oldWord = new WordDto();
