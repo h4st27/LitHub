@@ -1,5 +1,5 @@
 ﻿using ClosedXML.Excel;
-using Libra.Services.RandomDataService;
+using LitHub.Services.RandomDataService;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -26,8 +26,8 @@ public class RandomDataService : IRandomDataService
             using (var workbook = new XLWorkbook())
             {
                 var worksheet = workbook.Worksheets.Add("Sheet1");
-                worksheet.Cell("A1").Value = "Yaroslav";
-                worksheet.Cell("B1").Value = "Popov";
+                worksheet.Cell("A2").Value = "Oleksandr";
+                worksheet.Cell("B2").Value = "Mykhalchenko";
                 workbook.SaveAs(ms);
                 return ms.ToArray();
             }
