@@ -13,14 +13,14 @@ volumes:
     driver: local
 
 services:
-  libra:
-    image: libra
-    container_name: libra
+  lithub:
+    image: lithub
+    container_name: lithub
     depends_on:
       - otel-collector
     build:
       context: .
-      dockerfile: OpenRemoteManage.GatewayAPI/Dockerfile
+      dockerfile: LitHub.GatewayAPI/Dockerfile
     ports:
       - 5131:5131
     environment:

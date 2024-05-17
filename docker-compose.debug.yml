@@ -7,7 +7,7 @@ services:
     image: openremotemanagegatewayapi
     build:
       context: .
-      dockerfile: OpenRemoteManage.GatewayAPI/Dockerfile
+      dockerfile: LitHub.GatewayAPI/Dockerfile
       args:
         - configuration=Debug
     ports:

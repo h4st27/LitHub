@@ -7,8 +7,8 @@ builder.Services.AddOpenTelemetry()
     .WithMetrics(opt =>
     
         opt
-            .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("Libra.GatewayAPI"))
-            .AddMeter(builder.Configuration.GetValue<string>("LibraMeterName"))
+            .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("LitHub.GatewayAPI"))
+            .AddMeter(builder.Configuration.GetValue<string>("LitHubMeterName"))
             .AddAspNetCoreInstrumentation()
             .AddRuntimeInstrumentation()
             .AddProcessInstrumentation()
@@ -34,7 +34,7 @@ app.UseHttpsRedirection();
 
 var summaries = new[]
 {
-    "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Sci-Fi", "Thriller"
+    "Shounen", "Fantasy", "Action", "Comedy", "Adventure", "Super_Power", "Mystery", "Shoujo", "Isekai", "Horror"
 };
 
 app.MapGet("/genre", () =>

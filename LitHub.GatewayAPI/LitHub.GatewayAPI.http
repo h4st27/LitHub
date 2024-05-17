@@ -1,0 +1,4 @@
+@LitHub.GatewayAPI_HostAddress = http://localhost:5131
+
+GET {{LitHub.GatewayAPI_HostAddress}}/genre/
+Accept: application/json
