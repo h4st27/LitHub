@@ -1,4 +1,4 @@
-﻿namespace Libra.Services.SmtpEmailSender
+﻿namespace LitHub.Services.SmtpEmailSender
 {
     public interface IEmailSender
     {

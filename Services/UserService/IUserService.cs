@@ -1,7 +1,7 @@
-﻿using Libra.Dtos;
-using Libra.Models;
+﻿using LitHub.Dtos;
+using LitHub.Models;
 
-namespace Libra.Services.UserService
+namespace LitHub.Services.UserService
 {
     public interface IUserService
     {

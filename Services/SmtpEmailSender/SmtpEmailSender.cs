@@ -1,15 +1,15 @@
 ﻿using System.Net.Mail;
 using System.Net;
 
-namespace Libra.Services.SmtpEmailSender
+namespace LitHub.Services.SmtpEmailSender
 {
     public class SmtpEmailSender : IEmailSender
     {
         private readonly SmtpClient _smtpClient;
         private readonly string _smtpServer = "smtp.gmail.com";
         private readonly int _smtpPort = 587;
-        private readonly string _smtpUsername = "clemsonnn22@gmail.com";
-        private readonly string _smtpPassword = "secret";
+        private readonly string _smtpUsername = "a.o.mikhalchenko@gmail.com";
+        private readonly string _smtpPassword = "NOTHING";
 
         public SmtpEmailSender()
         {

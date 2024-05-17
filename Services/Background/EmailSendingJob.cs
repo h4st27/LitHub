@@ -1,6 +1,6 @@
-﻿using Libra.Services.SmtpEmailSender;
+﻿using LitHub.Services.SmtpEmailSender;
 using Quartz;
-namespace Libra.Services.Background
+namespace LitHub.Services.Background
 {
     public class EmailSendingJob : IJob
     {
@@ -13,8 +13,8 @@ namespace Libra.Services.Background
         {
             try
             {
-                await _emailSender.SendEmailAsync("popov.yarik.popov@gmail.com", "Hello", "Hi");
-                Console.WriteLine("Email sent successfully!");
+                await _emailSender.SendEmailAsync("a.o.mikhalchenko@gmail.com", "Have a good day", "Hope your day is wonderful");
+                Console.WriteLine("Email sent successfully.");
             }
             catch (Exception ex)
             {

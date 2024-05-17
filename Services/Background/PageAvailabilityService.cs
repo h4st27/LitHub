@@ -1,12 +1,12 @@
-﻿using Libra.Services.SmtpEmailSender;
+﻿using LitHub.Services.SmtpEmailSender;
 
-namespace Libra.Services.Background
+namespace LitHub.Services.Background
 {
     public class PageAvailabilityService : BackgroundService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _urlToMonitor = "https://moodle3.chmnu.edu.ua/";
-        private readonly string _logFilePath = "page_availability.txt";
+        private readonly string _urlToMonitor = "https://www.youtube.com";
+        private readonly string _logFilePath = "checkedpage.txt";
         public PageAvailabilityService(IHttpClientFactory httpClientFactory, IEmailSender emailSender)
         {
             _httpClient = httpClientFactory.CreateClient();
@@ -20,7 +20,7 @@ namespace Libra.Services.Background
                 {
                     var response = await _httpClient.GetAsync(_urlToMonitor, stoppingToken);
                     var isSuccessStatusCode = response.IsSuccessStatusCode;
-                    var logMessage = $"{DateTime.Now} - Website {_urlToMonitor} is {(isSuccessStatusCode ? "available" : "not available")}\n";
+                    var logMessage = $"URL {_urlToMonitor} is {(isSuccessStatusCode ? "online" : "offline")}-{DateTime.Now}\n";
 
                     await File.AppendAllTextAsync(_logFilePath, logMessage);
 

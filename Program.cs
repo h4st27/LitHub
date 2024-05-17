@@ -1,16 +1,13 @@
 using HealthChecks.UI.Client;
 using k8s.KubeConfigModels;
-using Libra.Services.ApiClient;
-using Libra.Services.Background;
-using Libra.Services.DataBaseService;
-using Libra.Services.DictionaryService;
-using Libra.Services.HealthChecker;
-using Libra.Services.Hubs;
-using Libra.Services.JokesService;
-using Libra.Services.RandomDataService;
-using Libra.Services.SmtpEmailSender;
-using Libra.Services.UserService;
-using Libra.Services.WordsService;
+using LitHub.Services.ApiClient;
+using LitHub.Services.Background;
+using LitHub.Services.DataBaseService;
+using LitHub.Services.HealthChecker;
+using LitHub.Services.Hubs;
+using LitHub.Services.RandomDataService;
+using LitHub.Services.SmtpEmailSender;
+using LitHub.Services.UserService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc;
@@ -21,7 +18,7 @@ using Quartz;
 using System.Configuration;
 using System.Text;
 
-namespace Libra
+namespace LitHub
 {
     public class Program
     {
@@ -46,12 +43,9 @@ namespace Libra
                 .AddDbContextCheck<AppDbContext>("database_health_check");
             builder.Services
                 .AddSingleton<IRandomDataService, RandomDataService>()
-                .AddSingleton<IUserService, UserService>()           // Сервіс додан як AddSingleton, адже сервіс повинен бути єдиним для усіх користувачів застосунку
-                .AddSingleton<IApiClient, ApiClient>()               // Сервіс виступає в ролі методів для взаємодії із HttpClient, не передбачається, що методи повинні змінюватися, тому для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddSingleton<IWordsService, WordsService>()        // Сервіс виступає в ролі зберігання єдиного списку слів та методів взаємодії із ним. Для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddSingleton<IJokesService, JokesService>()        // Сервіс виступає в ролі зберігання єдиного списку жартів та методів взаємодії із ним. Для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddSingleton<IEmailSender, SmtpEmailSender>()
-                .AddScoped<IDictionaryService, DictionaryService>();// Сервіс використовує дані іншого сервіса, який може змінювати свій стан. Для реєстрації цих змін використовується AddScoped
+                .AddSingleton<IUserService, UserService>()
+                .AddSingleton<IApiClient, ApiClient>()
+                .AddSingleton<IEmailSender, SmtpEmailSender>();
             builder.Services.AddControllers();
             builder.Services.AddHealthChecksUI(
                 o =>
@@ -101,7 +95,7 @@ namespace Libra
             {
                 foreach (var version in versions)
                 {
-                    c.SwaggerDoc($"{version}", new OpenApiInfo { Title = "Libra API", Version = $"{version}", });
+                    c.SwaggerDoc($"{version}", new OpenApiInfo { Title = "LitHub API", Version = $"{version}", });
                 }
 
                 c.ResolveConflictingActions(a => a.First());
@@ -144,7 +138,7 @@ namespace Libra
                 {
                     foreach (var version in versions)
                     {
-                        c.SwaggerEndpoint($"/swagger/{version}/swagger.json", $"Libra API {version}");
+                        c.SwaggerEndpoint($"/swagger/{version}/swagger.json", $"LitHub API {version}");
                     }
                 });
             }
@@ -152,7 +146,7 @@ namespace Libra
             app.MapHealthChecks("/user_health",
                 new HealthCheckOptions
                 {
-                    Predicate = healthCheck => healthCheck.Name == "dictionary_health_check",
+                    Predicate = healthCheck => healthCheck.Name == "user_health_check",
                     AllowCachingResponses = false,
                     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
                 });

@@ -1,8 +1,8 @@
-﻿using Libra.Services.DataBaseService;
-using Libra.Services.SmtpEmailSender;
+﻿using LitHub.Services.DataBaseService;
+using LitHub.Services.SmtpEmailSender;
 using Microsoft.EntityFrameworkCore;
 
-namespace Libra.Services.Background
+namespace LitHub.Services.Background
 {
     public class DatabaseNotificationService : BackgroundService
     {
@@ -26,9 +26,9 @@ namespace Libra.Services.Background
 
                     if (latestRecord != null)
                     {
-                        string subject = "Postgres";
+                        string subject = "MSSQL";
                         string body = $"Data in database has been changed.";
-                        await emailSender.SendEmailAsync("popov.yarik.popov@gmail.com", subject, body);
+                        await emailSender.SendEmailAsync("a.o.mikhalchenko@gmail.com", subject, body);
                     }
 
                     await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 
-namespace Libra.Services.Background
+namespace LitHub.Services.Background
 {
     public class ExternalApiService : BackgroundService
     {

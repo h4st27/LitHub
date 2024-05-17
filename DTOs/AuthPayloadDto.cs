@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Libra.Dtos
+namespace LitHub.Dtos
 {
     public class AuthPayloadDto
     {

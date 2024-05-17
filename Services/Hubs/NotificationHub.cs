@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace Libra.Services.Hubs
+namespace LitHub.Services.Hubs
 {
     public class NotificationHub : Hub
     {

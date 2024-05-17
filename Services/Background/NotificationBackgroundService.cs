@@ -1,7 +1,7 @@
-﻿using Libra.Services.Hubs;
+﻿using LitHub.Services.Hubs;
 using Microsoft.AspNetCore.SignalR;
 
-namespace Libra.Services.Background
+namespace LitHub.Services.Background
 {
     public class NotificationBackgroundService : BackgroundService
     {
@@ -18,7 +18,7 @@ namespace Libra.Services.Background
             {
                 var currentTime = DateTimeOffset.Now.ToString("HH:mm:ss");
 
-                await _hubContext.Clients.All.SendAsync("ReceiveMessage", $"New message sent at {currentTime}");
+                await _hubContext.Clients.All.SendAsync("ReceiveMessage", $"You got new message at {currentTime}");
 
                 await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);
             }

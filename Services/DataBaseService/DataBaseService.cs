@@ -1,7 +1,7 @@
 ﻿using k8s.KubeConfigModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace Libra.Services.DataBaseService
+namespace LitHub.Services.DataBaseService
 {
     public class AppDbContext : DbContext
     {

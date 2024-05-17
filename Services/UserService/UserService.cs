@@ -1,31 +1,31 @@
-﻿using Libra.Dtos;
-using Libra.Models;
+﻿using LitHub.Dtos;
+using LitHub.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Libra.Services.UserService
+namespace LitHub.Services.UserService
 {
     public class UserService : IUserService
     {
         private readonly List<UserData> _users = new List<UserData>{
-            new UserData
+             new UserData
             {
-                FirstName = "Yaroslav",
-                LastName = "Popov",
-                Email = "popov.yarik.popov@gmail.com",
-                DateOfBirth = new DateTime(2004, 4, 22),
+                FirstName = "Oleksandr",
+                LastName = "Mykhalchenko",
+                Email = "a.o.mikhalchenko@gmail.com",
+                DateOfBirth = new DateTime(2004, 1, 27),
                 HashedPassword = "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
                 LastLoginDate = DateTime.UtcNow,
                 LoginAttempts = 0
             },
             new UserData
             {
-                FirstName = "Alice",
+                FirstName = "Janeth",
                 LastName = "Smith",
-                Email = "alice@example.com",
+                Email = "janeth@example.com",
                 DateOfBirth = new DateTime(1985, 10, 20),
                 HashedPassword = "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
                 LastLoginDate = DateTime.UtcNow.AddDays(-1),
@@ -33,9 +33,9 @@ namespace Libra.Services.UserService
             },
             new UserData
             {
-                FirstName = "Bob",
+                FirstName = "William",
                 LastName = "Johnson",
-                Email = "bob@example.com",
+                Email = "william@example.com",
                 DateOfBirth = new DateTime(1982, 8, 25),
                 HashedPassword = "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
                 LastLoginDate = DateTime.UtcNow.AddDays(-2),
