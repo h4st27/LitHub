@@ -11,13 +11,8 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Libra")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31a8638e1fe58dc252ad9f48859213131810dbf4")]
-[assembly: System.Reflection.AssemblyProductAttribute("Libra")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Libra")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ProvideApplicationPartFactoryAttribute("Microsoft.AspNetCore.Mvc.ApplicationParts.ConsolidatedAssemblyApplicationPartFact" +
+    "ory, Microsoft.AspNetCore.Mvc.Razor")]
 
 // Создано классом WriteCodeFragment MSBuild.
 

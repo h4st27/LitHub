@@ -324,19 +324,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Clemson\\.nuget\\packages\\": {}
+    "C:\\Users\\aomik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\University\\Adaptive Web\\Proj\\Libra\\Libra.csproj",
-      "projectName": "Libra",
-      "projectPath": "D:\\University\\Adaptive Web\\Proj\\Libra\\Libra.csproj",
-      "packagesPath": "C:\\Users\\Clemson\\.nuget\\packages\\",
-      "outputPath": "D:\\University\\Adaptive Web\\Proj\\Libra\\obj\\",
+      "projectUniqueName": "E:\\uni\\WEB\\LitHub\\LitHub.csproj",
+      "projectName": "LitHub",
+      "projectPath": "E:\\uni\\WEB\\LitHub\\LitHub.csproj",
+      "packagesPath": "C:\\Users\\aomik\\.nuget\\packages\\",
+      "outputPath": "E:\\uni\\WEB\\LitHub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Clemson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aomik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -391,7 +391,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

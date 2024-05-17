@@ -1,7 +1,7 @@
-﻿using Libra.Models;
+﻿using LitHub.Models;
 using System.Text.Json;
 
-namespace Libra.Services.Currency
+namespace LitHub.Services.Currency
 {
     public class CurrencyService: ICurrencyService
     {

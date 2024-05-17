@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "E:\\uni\\WEB\\LitHub\\Libra.csproj": {}
+    "E:\\uni\\WEB\\LitHub\\LitHub.csproj": {}
   },
   "projects": {
-    "E:\\uni\\WEB\\LitHub\\Libra.csproj": {
+    "E:\\uni\\WEB\\LitHub\\LitHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\uni\\WEB\\LitHub\\Libra.csproj",
-        "projectName": "Libra",
-        "projectPath": "E:\\uni\\WEB\\LitHub\\Libra.csproj",
+        "projectUniqueName": "E:\\uni\\WEB\\LitHub\\LitHub.csproj",
+        "projectName": "LitHub",
+        "projectPath": "E:\\uni\\WEB\\LitHub\\LitHub.csproj",
         "packagesPath": "C:\\Users\\aomik\\.nuget\\packages\\",
         "outputPath": "E:\\uni\\WEB\\LitHub\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,4 +1,4 @@
-namespace Libra.Models
+namespace LitHub.Models
 {
     public class ErrorViewModel
     {

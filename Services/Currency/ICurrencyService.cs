@@ -1,6 +1,6 @@
-﻿using Libra.Models;
+﻿using LitHub.Models;
 
-namespace Libra.Services.Currency
+namespace LitHub.Services.Currency
 {
     public interface ICurrencyService
     {

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "DoP07PmjyijQamrag/kS3xq2HB/3POVwWAZB3sMEkppRNxIi0dhMCieGKRfIi0wpeTFVSxoHRWLqZmsH3KWrTg==",
+  "dgSpecHash": "r4/WBIk8YNJC6ciqznTpZJfA3BmhrbAJureX+h5w9MOZWnsLSmRDy/7PN0x7zPdNdvnb9Lkc0/niMa7Vi5StbQ==",
   "success": true,
-  "projectFilePath": "D:\\University\\Adaptive Web\\Proj\\Libra\\Libra.csproj",
+  "projectFilePath": "E:\\uni\\WEB\\LitHub\\LitHub.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Clemson\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.4\\microsoft.aspnetcore.connections.abstractions.8.0.4.nupkg.sha512",
-    "C:\\Users\\Clemson\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\8.0.4\\microsoft.aspnetcore.signalr.common.8.0.4.nupkg.sha512",
-    "C:\\Users\\Clemson\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\Clemson\\.nuget\\packages\\microsoft.extensions.features\\8.0.4\\microsoft.extensions.features.8.0.4.nupkg.sha512",
-    "C:\\Users\\Clemson\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
-    "C:\\Users\\Clemson\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\Clemson\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512"
+    "C:\\Users\\aomik\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.4\\microsoft.aspnetcore.connections.abstractions.8.0.4.nupkg.sha512",
+    "C:\\Users\\aomik\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\8.0.4\\microsoft.aspnetcore.signalr.common.8.0.4.nupkg.sha512",
+    "C:\\Users\\aomik\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\aomik\\.nuget\\packages\\microsoft.extensions.features\\8.0.4\\microsoft.extensions.features.8.0.4.nupkg.sha512",
+    "C:\\Users\\aomik\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\aomik\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\aomik\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

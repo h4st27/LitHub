@@ -1,8 +1,8 @@
-﻿using Libra.Models;
-using Libra.Services.Currency;
+﻿using LitHub.Models;
+using LitHub.Services.Currency;
 using Microsoft.AspNetCore.SignalR;
 using System.Text.Json;
-namespace Libra
+namespace LitHub
 {
     public class CurrencyHub : Hub
     {
