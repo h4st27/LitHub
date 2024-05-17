@@ -9294,19 +9294,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Clemson\\.nuget\\packages\\": {}
+    "C:\\Users\\aomik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\University\\Adaptive Web\\Proj\\Libra\\Libra.csproj",
+      "projectUniqueName": "E:\\uni\\WEB\\LitHub\\Libra.csproj",
       "projectName": "Libra",
-      "projectPath": "D:\\University\\Adaptive Web\\Proj\\Libra\\Libra.csproj",
-      "packagesPath": "C:\\Users\\Clemson\\.nuget\\packages\\",
-      "outputPath": "D:\\University\\Adaptive Web\\Proj\\Libra\\obj\\",
+      "projectPath": "E:\\uni\\WEB\\LitHub\\Libra.csproj",
+      "packagesPath": "C:\\Users\\aomik\\.nuget\\packages\\",
+      "outputPath": "E:\\uni\\WEB\\LitHub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Clemson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aomik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9326,6 +9326,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9428,7 +9433,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
