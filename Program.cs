@@ -42,7 +42,7 @@ namespace LitHub
             builder.Services.AddAuthorization();
             builder.Services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Libra API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "LitHub API", Version = "v1" });
 
                 var securityScheme = new OpenApiSecurityScheme
                 {

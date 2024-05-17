@@ -1,12 +1,181 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\uni\\WEB\\LitHub\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\dtos\\authpayloaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:dtos\\authpayloaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\models\\responsemodels\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:models\\responsemodels\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\models\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:models\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\services\\apiclient\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:services\\apiclient\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\services\\apiclient\\iapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:services\\apiclient\\iapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\services\\userservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:services\\userservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|e:\\uni\\web\\lithub\\services\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|LitHub.csproj|solutionrelative:services\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:37:08.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthPayloadDto.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\DTOs\\AuthPayloadDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\AuthPayloadDto.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\DTOs\\AuthPayloadDto.cs",
+              "RelativeToolTip": "DTOs\\AuthPayloadDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:37:07.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserDto.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "DTOs\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:37:05.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseResponse.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Models\\ResponseModels\\BaseResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ResponseModels\\BaseResponse.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Models\\ResponseModels\\BaseResponse.cs",
+              "RelativeToolTip": "Models\\ResponseModels\\BaseResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:37:03.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Models\\UserData.cs",
+              "RelativeDocumentMoniker": "Models\\UserData.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Models\\UserData.cs",
+              "RelativeToolTip": "Models\\UserData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:37:01.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\ApiClient\\ApiClient.cs",
+              "RelativeDocumentMoniker": "Services\\ApiClient\\ApiClient.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\ApiClient\\ApiClient.cs",
+              "RelativeToolTip": "Services\\ApiClient\\ApiClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:37:00.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IApiClient.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\ApiClient\\IApiClient.cs",
+              "RelativeDocumentMoniker": "Services\\ApiClient\\IApiClient.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\ApiClient\\IApiClient.cs",
+              "RelativeToolTip": "Services\\ApiClient\\IApiClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:36:59.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\UserService\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService\\IUserService.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\UserService\\IUserService.cs",
+              "RelativeToolTip": "Services\\UserService\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:36:53.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\UserService\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService\\UserService.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\UserService\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:34:04.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:31:06.976Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
