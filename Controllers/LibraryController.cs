@@ -3,34 +3,34 @@ using MyApp.DTOs;
 using MyApp.Models;
 using MyApp.Models.ResponseModels;
 using MyApp.Services.ApiClient;
-using MyApp.Services.DictionaryService;
+using MyApp.Services.LibraryService;
 using System.Net;
 
 namespace MyApp.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DictionaryController : ControllerBase
+    public class LibraryController : ControllerBase
     {
         private readonly IApiClient _apiClient;
         private readonly IConfiguration _configuration;
-        private readonly IDictionaryService _dictionaryService;
-        public DictionaryController(IApiClient apiClient, IConfiguration configuration, IDictionaryService dictionaryService)
+        private readonly ILibraryService _libraryService;
+        public LibraryController(IApiClient apiClient, IConfiguration configuration, ILibraryService libraryService)
         {
             _apiClient = apiClient;
             _configuration = configuration;
-            _dictionaryService = dictionaryService; 
+            _libraryService = libraryService; 
         }
-        [HttpGet("{word}")]
-        public async Task<ActionResult> GetDefinition(string word)
+        [HttpGet("{book}")]
+        public async Task<ActionResult> GetDefinition(string book)
         {
-            var wordToDefine = new WordDto() { Word = word };
-            var response = new BaseResponse<DictionaryData>();
+            var bookToDefine = new BookDTO() { Book = book };
+            var response = new BaseResponse<LibraryData>();
             try
             {
-                var apiData = await _apiClient.GetAsync<DictionaryData>($"https://api.api-ninjas.com/v1/dictionary?word={wordToDefine.Word}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
+                var apiData = await _apiClient.GetAsync<LibraryData>($"https://api.api-ninjas.com/v1/dictionary?word={bookToDefine.Book}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
                 response.Data = apiData;
-                response.Message = $"Definition of word '{wordToDefine.Word}'.";
+                response.Message = $"Definition of book '{bookToDefine.Book}'.";
                 return Ok(response);
             }
             catch
@@ -41,10 +41,10 @@ namespace MyApp.Controllers
         [HttpGet()]
         public async Task<ActionResult> GetDictionary()
         {
-            var response = new BaseResponse<List<DictionaryData>>();
+            var response = new BaseResponse<List<LibraryData>>();
             try
             {
-                response.Data = _dictionaryService.GetDictionary();
+                response.Data = _libraryService.GetLibrary();
                 response.Message = $"Your dictionary.";
                 return Ok(response);
             }
@@ -53,21 +53,21 @@ namespace MyApp.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, "An error occurred while processing your request.");
             }
         }
-        [HttpPost("{word}")]
-        public async Task<ActionResult> PostDefinition(string word)
+        [HttpPost("{book}")]
+        public async Task<ActionResult> PostDefinition(string book)
         {
-            var wordToDefine = new WordDto() { Word = word };
-            var response = new BaseResponse<DictionaryData>();
+            var bookToDefine = new BookDTO() { Book = book };
+            var response = new BaseResponse<LibraryData>();
             try
             {
-                var apiData = await _apiClient.GetAsync<DictionaryData>($"https://api.api-ninjas.com/v1/dictionary?word={wordToDefine.Word}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
+                var apiData = await _apiClient.GetAsync<LibraryData>($"https://api.api-ninjas.com/v1/dictionary?word={bookToDefine.Book}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
                 response.Data = apiData;
-                if (_dictionaryService.AddDefinitionToWord(wordToDefine.Word, apiData))
+                if (_libraryService.AddDefinitionToBook(bookToDefine.Book, apiData))
                 {
                     response.Message = $"Added definition.";
                     return Ok(response);
                 }
-                response.Message = "Wrong word.";
+                response.Message = "Wrong book.";
                 return BadRequest(response);
             }
             catch
@@ -75,20 +75,20 @@ namespace MyApp.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, "An error occurred while processing your request.");
             }
         }
-        [HttpDelete("{word}")]
-        public async Task<ActionResult> DeleteDefinition(string word)
+        [HttpDelete("{book}")]
+        public async Task<ActionResult> DeleteDefinition(string book)
         {
-            var wordToDefine = new WordDto() { Word = word };
+            var bookToDefine = new BookDTO() { Book = book };
             var response = new BaseResponse<string>();
-            response.Data = wordToDefine.Word;
+            response.Data = bookToDefine.Book;
             try
             {
-                if (_dictionaryService.RemoveDefinitionFromWord(wordToDefine.Word))
+                if (_libraryService.RemoveDefinitionFromBook(bookToDefine.Book))
                 {
                     response.Message = $"Deleted.";
                     return Ok(response);
                 }
-                response.Message = "No such word to define.";
+                response.Message = "No such book to define.";
                 return NotFound(response);
             }
             catch
@@ -97,23 +97,23 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpPut("{word}")]
-        public async Task<ActionResult> UpdateWordDefinition(string word)
+        [HttpPut("{book}")]
+        public async Task<ActionResult> UpdateBookDefinition(string book)
         {
-            var wordToDefine = new WordDto() { Word = word };
-            var response = new BaseResponse<DictionaryData>() { Data = new() };
-            response.Data.Word = wordToDefine.Word;
+            var bookToDefine = new BookDTO() { Book = book };
+            var response = new BaseResponse<LibraryData>() { Data = new() };
+            response.Data.Book = bookToDefine.Book;
             try
             {
-                var apiData = await _apiClient.GetAsync<DictionaryData>($"https://api.api-ninjas.com/v1/dictionary?word={wordToDefine.Word}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
-                if (_dictionaryService.ChangeDefinitionOfWord(wordToDefine.Word, apiData.Definition))
+                var apiData = await _apiClient.GetAsync<LibraryData>($"https://api.api-ninjas.com/v1/dictionary?word={bookToDefine.Book}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
+                if (_libraryService.ChangeDefinitionOfBook(bookToDefine.Book, apiData.Definition))
                 {
                     response.Data.Definition = apiData.Definition;
                     response.Data.Valid = apiData.Valid;
                     response.Message = $"Changed.";
                     return Ok(response);
                 }
-                response.Message = "No such word to define.";
+                response.Message = "No such book to define.";
                 return NotFound(response);
             }
             catch

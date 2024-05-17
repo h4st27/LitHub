@@ -1,9 +1,9 @@
 ﻿
 namespace MyApp.Models
 {
-    public class DictionaryData()
+    public class LibraryData()
     {
-        public string Word { get; set; }
+        public string Book { get; set; }
         public bool Valid { get; set; }
         public string Definition { get; set; }
     }

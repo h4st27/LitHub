@@ -3,36 +3,36 @@ using MyApp.DTOs;
 using MyApp.Models;
 using MyApp.Models.ResponseModels;
 using MyApp.Services.ApiClient;
-using MyApp.Services.WordsService;
+using MyApp.Services.BooksService;
 using System.Net;
 
 namespace MyApp.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WordsController : ControllerBase
+    public class BooksController : ControllerBase
     {
         private readonly IApiClient _apiClient;
         private readonly IConfiguration _configuration;
-        private readonly IWordsService _wordsService;
-        public WordsController(IApiClient apiClient, IConfiguration configuration, IWordsService wordsService )
+        private readonly IBooksService _booksService;
+        public BooksController(IApiClient apiClient, IConfiguration configuration, IBooksService booksService )
         {
             _apiClient = apiClient;
             _configuration = configuration;
-            _wordsService= wordsService; 
+            _booksService= booksService; 
         }
 
-        [HttpGet("HomonymTo")]
-        public async Task<ActionResult> GetHomonyms(string wordToFind)
+        [HttpGet("TypesTo")]
+        public async Task<ActionResult> GetTypes(string bookToFind)
         {
-            var response = new BaseResponse<HomonymsData>();
-            var word = new WordDto();
-            word.Word = wordToFind;
+            var response = new BaseResponse<TypeData>();
+            var book = new BookDTO();
+            book.Book = bookToFind;
             try
             {
-                HomonymsData? apiData = await _apiClient.GetAsync<HomonymsData>($"https://api.api-ninjas.com/v1/thesaurus?word={word.Word}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
+                TypeData? apiData = await _apiClient.GetAsync<TypeData>($"https://api.api-ninjas.com/v1/thesaurus?word={book.Book}&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
                 response.Data = apiData;
-                response.Message = $"Retrieved homonyms of word '{word.Word}'.";
+                response.Message = $"Retrieved author of book '{book.Book}'.";
                 return Ok(response);
             }
             catch {
@@ -41,14 +41,14 @@ namespace MyApp.Controllers
         }
 
         [HttpGet("Random")]
-        public async Task<ActionResult> GetRandomWord()
+        public async Task<ActionResult> GetRandomBook()
         {
             try
             {
                 var response = new BaseResponse<string>();
-                var word = _wordsService.GetRandomWord();
-                response.Data = word;
-                response.Message = $"Your word is '{word}'.";
+                var book = _booksService.GetRandomBook();
+                response.Data = book;
+                response.Message = $"Your book is '{book}'.";
                 return Ok(response);
             }
             catch
@@ -58,14 +58,14 @@ namespace MyApp.Controllers
         }
 
         [HttpGet()]
-        public async Task<ActionResult> GetWord()
+        public async Task<ActionResult> GetBook()
         {
             try
             {
                 var response = new BaseResponse<HashSet<string>>();
-                var words = _wordsService.RetrieveWords();
-                response.Data = words;
-                response.Message = $"Words retrieved.";
+                var books = _booksService.RetrieveBooks();
+                response.Data = books;
+                response.Message = $"Books retrieved.";
                 return Ok(response);
             }
             catch
@@ -75,18 +75,18 @@ namespace MyApp.Controllers
         }
 
         [HttpPost()]
-        public async Task<ActionResult> PostWord([FromBody] WordDto word)
+        public async Task<ActionResult> PostWord([FromBody] BookDTO book)
         {
             try
             {
                 var response = new BaseResponse<string>();
-                response.Data = word.Word;
-                if (_wordsService.AddWord(word.Word))
+                response.Data = book.Book;
+                if (_booksService.AddBook(book.Book))
                 {
-                    response.Message = "The word is successfully added.";
+                    response.Message = "The book is successfully added.";
                     return Ok(response);
                 }
-                response.Message = "The word already exists.";
+                response.Message = "The book already exists.";
                 return BadRequest(response);
             }
             catch
@@ -95,23 +95,23 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpDelete("{wordToFind}")]
-        public async Task<ActionResult> DeleteWord(string wordToFind)
+        [HttpDelete("{bookToFind}")]
+        public async Task<ActionResult> DeleteBook(string bookToFind)
         {
-            var word = new WordDto();
-            word.Word = wordToFind;
+            var book = new BookDTO();
+            book.Book = bookToFind;
             try
             {
                 var response = new BaseResponse<string>();
-                response.Data = word.Word;
-                if (_wordsService.RemoveWord(word.Word))
+                response.Data = book.Book;
+                if (_booksService.RemoveBook(book.Book))
                 {
-                    response.Message = $"The word '{word.Word}' is successfully deleted.";
-                    response.Data = word.Word;
+                    response.Message = $"The book '{book.Book}' is successfully deleted.";
+                    response.Data = book.Book;
                     return (Ok(response));
                 }
-                response.Message = $"There is no '{word.Word}' in list.";
-                response.Data = word.Word;
+                response.Message = $"There is no '{book.Book}' in list.";
+                response.Data = book.Book;
                 return NotFound(response);
 
             }
@@ -121,22 +121,22 @@ namespace MyApp.Controllers
             }
         }
 
-        [HttpPut("{wordToFind}")]
-        public async Task<ActionResult> ChangeWord(string wordToFind, [FromBody] WordDto word)
+        [HttpPut("{bookToFind}")]
+        public async Task<ActionResult> ChangeBook(string bookToFind, [FromBody] BookDTO book)
         {
-            var oldWord = new WordDto();
-            oldWord.Word = wordToFind;
+            var oldBook = new BookDTO();
+            oldBook.Book = bookToFind;
             try
             {
                 var response = new BaseResponse<string>();
-                response.Data = word.Word;
-                if (_wordsService.ReplaceWord(oldWord.Word, word.Word))
+                response.Data = book.Book;
+                if (_booksService.ReplaceBook(oldBook.Book, book.Book))
                 {
-                    response.Message = $"The word '{oldWord.Word}' is successfully changed to {word.Word}.";
+                    response.Message = $"The book '{oldBook.Book}' is successfully changed to {book.Book}.";
                     return Ok(response);
                 }
-                response.Message = $"There is no '{oldWord.Word}' in list.";
-                response.Data = oldWord.Word;
+                response.Message = $"There is no '{oldBook.Book}' in list.";
+                response.Data = oldBook.Book;
                 return NotFound(response);
             }
             catch

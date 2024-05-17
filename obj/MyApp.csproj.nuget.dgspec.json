@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj": {}
+    "E:\\uni\\WEB\\LitHub\\MyApp.csproj": {}
   },
   "projects": {
-    "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj": {
+    "E:\\uni\\WEB\\LitHub\\MyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj",
+        "projectUniqueName": "E:\\uni\\WEB\\LitHub\\MyApp.csproj",
         "projectName": "MyApp",
-        "projectPath": "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj",
-        "packagesPath": "C:\\Users\\Clemson\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\Adaptive Web\\Proj\\MyApp\\obj\\",
+        "projectPath": "E:\\uni\\WEB\\LitHub\\MyApp.csproj",
+        "packagesPath": "C:\\Users\\aomik\\.nuget\\packages\\",
+        "outputPath": "E:\\uni\\WEB\\LitHub\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Clemson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aomik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -64,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,36 +3,36 @@ using MyApp.DTOs;
 using MyApp.Models;
 using MyApp.Models.ResponseModels;
 using MyApp.Services.ApiClient;
-using MyApp.Services.JokesService;
-using MyApp.Services.WordsService;
+using MyApp.Services.MangasService;
+using MyApp.Services.BooksService;
 using System.Net;
 
 namespace MyApp.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class JokesController : ControllerBase
+    public class MangasController : ControllerBase
     {
         private readonly IApiClient _apiClient;
         private readonly IConfiguration _configuration;
-        private readonly IJokesService _jokesService;
-        public JokesController(IApiClient apiClient, IConfiguration configuration, IJokesService jokesService)
+        private readonly IMangasService _mangasService;
+        public MangasController(IApiClient apiClient, IConfiguration configuration, IMangasService mangasService)
         {
             _apiClient = apiClient;
             _configuration = configuration;
-            _jokesService= jokesService;
+            _mangasService= mangasService;
         }
 
         [HttpGet("Random")]
-        public async Task<ActionResult> GetRandomJoke()
+        public async Task<ActionResult> GetRandomManga()
         {
-            var response = new BaseResponse<JokeData>();
-            var joke = new JokeDto();
+            var response = new BaseResponse<MangaData>();
+            var manga = new MangaDto();
             try
             {
-                var apiData = await _apiClient.GetAsync<JokeData>($"https://api.api-ninjas.com/v1/chucknorris?&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
+                var apiData = await _apiClient.GetAsync<MangaData>($"https://api.api-ninjas.com/v1/chucknorris?&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
                 response.Data = apiData;
-                response.Message = $"Your joke is '{joke.Joke}'.";
+                response.Message = $"Your manga is '{manga.Manga}'.";
                 return Ok(response);
             }
             catch {
@@ -41,19 +41,19 @@ namespace MyApp.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> GetJokeById(int id)
+        public async Task<ActionResult> GetMangaById(int id)
         {
             try
             {
                 var response = new BaseResponse<string>();
-                var joke = _jokesService.GetJokeById(id);
-                response.Data = joke;
-                if (joke==null)
+                var manga = _mangasService.GetMangaById(id);
+                response.Data = manga;
+                if (manga==null)
                 {
-                    response.Message = $"There is no such joke in list.";
+                    response.Message = $"There is no such manga in list.";
                     return NotFound(response);
                 }
-                response.Message = $"Your joke is '{joke}'.";
+                response.Message = $"Your manga is '{manga}'.";
                 return Ok(response);
             }
             catch
@@ -63,14 +63,14 @@ namespace MyApp.Controllers
         }
 
         [HttpGet()]
-        public async Task<ActionResult> GetJokes()
+        public async Task<ActionResult> GetMangas()
         {
             try
             {
                 var response = new BaseResponse<HashSet<string>>();
-                var jokes = _jokesService.RetrieveJokes();
-                response.Data = jokes;
-                response.Message = $"Jokes retrieved.";
+                var mangas = _mangasService.RetrieveMangas();
+                response.Data = mangas;
+                response.Message = $"Mangas retrieved.";
                 return Ok(response);
             }
             catch
@@ -80,18 +80,18 @@ namespace MyApp.Controllers
         }
 
         [HttpPost()]
-        public async Task<ActionResult> PostWord([FromBody] JokeDto joke)
+        public async Task<ActionResult> PostBook([FromBody] MangaDto manga)
         {
             try
             {
                 var response = new BaseResponse<string>();
-                response.Data = joke.Joke;
-                if (_jokesService.AddJoke(joke.Joke))
+                response.Data = manga.Manga;
+                if (_mangasService.AddManga(manga.Manga))
                 {
-                    response.Message = "The joke is successfully added.";
+                    response.Message = "The manga is successfully added.";
                     return Ok(response);
                 }
-                response.Message = "The joke already exists.";
+                response.Message = "The manga already exists.";
                 return BadRequest(response);
             }
             catch
@@ -101,21 +101,21 @@ namespace MyApp.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteWord(int id)
+        public async Task<ActionResult> DeleteBook(int id)
         {
-            var joke = new JokeDto();
+            var manga = new MangaDto();
             try
             {
                 var response = new BaseResponse<string>();
-                joke.Joke = _jokesService.GetJokeById(id);
-                if (_jokesService.RemoveJoke(id))
+                manga.Manga = _mangasService.GetMangaById(id);
+                if (_mangasService.RemoveManga(id))
                 {
-                    response.Message = $"The joke is successfully deleted.";
-                    response.Data = joke.Joke;
+                    response.Message = $"The manga is successfully deleted.";
+                    response.Data = manga.Manga;
                     return (Ok(response));
                 }
-                response.Message = $"There is no such joke in list.";
-                response.Data = joke.Joke;
+                response.Message = $"There is no such manga in list.";
+                response.Data = manga.Manga;
                 return NotFound(response);
 
             }
@@ -126,18 +126,18 @@ namespace MyApp.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> ChangeWord(int id, [FromBody] JokeDto joke)
+        public async Task<ActionResult> ChangeBook(int id, [FromBody] MangaDto manga)
         {
             try
             {
                 var response = new BaseResponse<string>();
-                response.Data = joke.Joke;
-                if (_jokesService.ReplaceJoke(id, joke.Joke))
+                response.Data = manga.Manga;
+                if (_mangasService.ReplaceManga(id, manga.Manga))
                 {
-                    response.Message = $"The joke with id '{id}' is successfully changed to {joke.Joke}.";
+                    response.Message = $"The manga with id '{id}' is successfully changed to {manga.Manga}.";
                     return Ok(response);
                 }
-                response.Message = $"There is no such joke in list or already exists.";
+                response.Message = $"There is no such manga in list or already exists.";
                 return NotFound(response);
             }
             catch

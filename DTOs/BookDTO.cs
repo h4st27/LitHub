@@ -1,9 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyApp.DTOs
 {
-    public class DefinitionDto
+    public class BookDTO
     {
         private string _book;
         [Required(ErrorMessage = "Book is required")]
@@ -14,11 +14,5 @@ namespace MyApp.DTOs
             get => _book;
             set => _book = value?.Trim().ToLower();
         }
-        [Required(ErrorMessage = "Valid is required")]
-        [DefaultValue(false)]
-        public bool Valid { get; set; }
-        [Required(ErrorMessage = "Definition is required")]
-        [DefaultValue("definition")]
-        public string Definition {  get; set; }
     }
 }
