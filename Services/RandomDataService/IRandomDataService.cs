@@ -1,4 +1,4 @@
-﻿namespace Libra.Services.RandomDataService
+﻿namespace LitHub.Services.RandomDataService
 {
     public interface IRandomDataService
     {

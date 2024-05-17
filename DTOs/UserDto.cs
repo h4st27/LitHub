@@ -3,7 +3,7 @@ using System.Text;
 using System.Security.Cryptography;
 using System.ComponentModel;
 
-namespace Libra.Dtos
+namespace LitHub.Dtos
 {
     public class UserDto
     {

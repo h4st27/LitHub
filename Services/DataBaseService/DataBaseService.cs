@@ -1,7 +1,7 @@
-﻿using Libra.Models;
+﻿using LitHub.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Libra.Services.DataBaseService
+namespace LitHub.Services.DataBaseService
 {
     public class DataBaseService: DbContext
     {
