@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K1AdZxByKumvJdu/DFb08aM2wT9n4yk36khuU7uRawXsABXZklxOsPCRy2mhw8BCVq9sWA3IYeVakKGvi8DeDA==",
+  "dgSpecHash": "BcgniK+jWvz7PKqlw7WmyxIBowB7Utq9bThL7wEh+BIhY1V0jStpB1NftNqli1fpAf4/aoSQwM5PZLfeFNkrKw==",
   "success": true,
-  "projectFilePath": "E:\\uni\\WEB\\LitHub\\Libra.csproj",
+  "projectFilePath": "E:\\uni\\WEB\\LitHub\\LitHub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aomik\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.3\\microsoft.aspnetcore.authentication.jwtbearer.8.0.3.nupkg.sha512",
     "C:\\Users\\aomik\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

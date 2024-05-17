@@ -1,4 +1,4 @@
-﻿namespace MyApp.Services.BooksService
+﻿namespace LitHub.Services.BooksService
 {
     public class BooksService : IBooksService
     {

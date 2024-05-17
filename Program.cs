@@ -1,16 +1,16 @@
 
-using Libra.Services.ApiClient;
-using Libra.Services.DictionaryService;
-using Libra.Services.JokesService;
-using Libra.Services.UserService;
-using Libra.Services.WordsService;
+using LitHub.Services.ApiClient;
+using LitHub.Services.LibraryService;
+using LitHub.Services.MangasService;
+using LitHub.Services.UserService;
+using LitHub.Services.BooksService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
-namespace Libra
+namespace LitHub
 {
     public class Program
     {
@@ -22,9 +22,9 @@ namespace Libra
             builder.Services
                 .AddSingleton<IUserService,UserService>()           // Сервіс додан як AddSingleton, адже сервіс повинен бути єдиним для усіх користувачів застосунку
                 .AddSingleton<IApiClient,ApiClient>()               // Сервіс виступає в ролі методів для взаємодії із HttpClient, не передбачається, що методи повинні змінюватися, тому для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddSingleton<IWordsService, WordsService>()        // Сервіс виступає в ролі зберігання єдиного списку слів та методів взаємодії із ним. Для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddSingleton<IJokesService, JokesService>()        // Сервіс виступає в ролі зберігання єдиного списку жартів та методів взаємодії із ним. Для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddScoped<IDictionaryService, DictionaryService>();// Сервіс використовує дані іншого сервіса, який може змінювати свій стан. Для реєстрації цих змін використовується AddScoped
+                .AddSingleton<IBooksService, BooksService>()        // Сервіс виступає в ролі зберігання єдиного списку слів та методів взаємодії із ним. Для роботи із єдиним об'єктом сервіса використовується AddSingleton
+                .AddSingleton<IMangasService, MangasService>()        // Сервіс виступає в ролі зберігання єдиного списку жартів та методів взаємодії із ним. Для роботи із єдиним об'єктом сервіса використовується AddSingleton
+                .AddScoped<ILibraryService, LibraryService>();// Сервіс використовує дані іншого сервіса, який може змінювати свій стан. Для реєстрації цих змін використовується AddScoped
             builder.Services.AddControllers();
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

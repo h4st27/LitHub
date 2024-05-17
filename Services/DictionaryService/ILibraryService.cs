@@ -1,6 +1,6 @@
-﻿using MyApp.Models;
+﻿using LitHub.Models;
 
-namespace MyApp.Services.LibraryService
+namespace LitHub.Services.LibraryService
 {
     public interface ILibraryService
     {

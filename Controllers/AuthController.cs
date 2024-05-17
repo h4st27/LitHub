@@ -1,12 +1,12 @@
-﻿using Libra.Dtos;
-using Libra.Models;
-using Libra.Models.ResponseModels;
-using Libra.Services.UserService;
+﻿using LitHub.Dtos;
+using LitHub.Models;
+using LitHub.Models.ResponseModels;
+using LitHub.Services.UserService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace Libra.Controllers
+namespace LitHub.Controllers
 {
     [ApiController]
     [Route("[controller]")]

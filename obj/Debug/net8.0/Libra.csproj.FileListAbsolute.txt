@@ -39,3 +39,44 @@ D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\System.IdentityModel.Toke
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 D:\University\Adaptive Web\Proj\Libra\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\appsettings.Development.json
+E:\uni\WEB\LitHub\bin\Debug\net8.0\appsettings.json
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Libra.exe
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Libra.deps.json
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Libra.runtimeconfig.json
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Libra.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Libra.pdb
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Microsoft.OpenApi.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\uni\WEB\LitHub\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.csproj.AssemblyReference.cache
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.GeneratedMSBuildEditorConfig.editorconfig
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.AssemblyInfoInputs.cache
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.AssemblyInfo.cs
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.csproj.CoreCompileInputs.cache
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.MvcApplicationPartsAssemblyInfo.cs
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.MvcApplicationPartsAssemblyInfo.cache
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.sourcelink.json
+E:\uni\WEB\LitHub\obj\Debug\net8.0\staticwebassets.build.json
+E:\uni\WEB\LitHub\obj\Debug\net8.0\staticwebassets.development.json
+E:\uni\WEB\LitHub\obj\Debug\net8.0\staticwebassets\msbuild.Libra.Microsoft.AspNetCore.StaticWebAssets.props
+E:\uni\WEB\LitHub\obj\Debug\net8.0\staticwebassets\msbuild.build.Libra.props
+E:\uni\WEB\LitHub\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Libra.props
+E:\uni\WEB\LitHub\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Libra.props
+E:\uni\WEB\LitHub\obj\Debug\net8.0\staticwebassets.pack.json
+E:\uni\WEB\LitHub\obj\Debug\net8.0\scopedcss\bundle\Libra.styles.css
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.csproj.Up2Date
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.dll
+E:\uni\WEB\LitHub\obj\Debug\net8.0\refint\Libra.dll
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.pdb
+E:\uni\WEB\LitHub\obj\Debug\net8.0\Libra.genruntimeconfig.cache
+E:\uni\WEB\LitHub\obj\Debug\net8.0\ref\Libra.dll

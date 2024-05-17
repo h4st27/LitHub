@@ -1,4 +1,4 @@
-﻿namespace MyApp.Services.MangasService
+﻿namespace LitHub.Services.MangasService
 {
     public class MangasService : IMangasService
     {

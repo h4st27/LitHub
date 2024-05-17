@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Libra")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("LitHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff9294f7f680ad7e0c6d9bb0b3e2a02b5576e42f")]
-[assembly: System.Reflection.AssemblyProductAttribute("Libra")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Libra")]
+[assembly: System.Reflection.AssemblyProductAttribute("LitHub")]
+[assembly: System.Reflection.AssemblyTitleAttribute("LitHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

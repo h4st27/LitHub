@@ -1,5 +1,5 @@
 ﻿
-namespace MyApp.Models
+namespace LitHub.Models
 {
     public class LibraryData()
     {

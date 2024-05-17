@@ -1,8 +1,8 @@
-﻿using MyApp.DTOs;
-using MyApp.Models;
-using MyApp.Services.BooksService;
+﻿using LitHub.DTOs;
+using LitHub.Models;
+using LitHub.Services.BooksService;
 
-namespace MyApp.Services.LibraryService
+namespace LitHub.Services.LibraryService
 {
     public class LibraryService : ILibraryService
     {

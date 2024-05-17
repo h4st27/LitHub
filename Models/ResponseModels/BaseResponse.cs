@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Libra.Models.ResponseModels
+namespace LitHub.Models.ResponseModels
 {
     public class BaseResponse<T>
     {

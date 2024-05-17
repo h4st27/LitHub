@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Libra.Models
+namespace LitHub.Models
 {
     public class UserData
     {
