@@ -2,9 +2,9 @@ version: '2.1'
 
 services:
 
-  libra-api:
+  lithub-api:
     image: webapi:latest  
-    container_name: libra-api
+    container_name: lithub-api
     build:
       context: . 
       dockerfile: ./Dockerfile
@@ -15,26 +15,26 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
     depends_on:
       - postgres
-      - libra-seq
+      - lithub-seq
 
   postgres:
     image: postgres:latest
-    container_name: libra-postgres
+    container_name: lithub-postgres
     restart: always
     environment:
       POSTGRES_USER: postgres  
-      POSTGRES_PASSWORD: 2204 
-      POSTGRES_DB: libra  
+      POSTGRES_PASSWORD: 2002 
+      POSTGRES_DB: lithub  
     ports:
       - "5432:5432" 
     volumes:
       - pg_data:/var/lib/postgresql/data 
 
-  libra-seq:
+  lithub-seq:
     image: datalust/seq:latest 
-    container_name: libra-seq
+    container_name: lithub-seq
     environment:
-      ACCEPT_EULA: Y  
+      ACCEPT_EULA: Y
     ports:
       - "5341:5341" 
       - "8081:80"

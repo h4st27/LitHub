@@ -1,12 +1,12 @@
 ﻿using DocumentFormat.OpenXml.Spreadsheet;
-using Libra.Models;
-using Libra.Models.ResponseModels;
-using Libra.Services.RandomDataService;
+using LitHub.Models;
+using LitHub.Models.ResponseModels;
+using LitHub.Services.RandomDataService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace Libra.Controllers.RandomDataController.v1
+namespace LitHub.Controllers.RandomDataController.v1
 {
     [ApiVersion("1.0")]
     [Route("v{version:apiVersion}/[controller]")]

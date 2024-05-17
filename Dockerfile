@@ -20,4 +20,4 @@ COPY --from=build /app/publish .
 
 EXPOSE 80
 
-ENTRYPOINT ["dotnet", "Libra.dll"]
+ENTRYPOINT ["dotnet", "LitHub.dll"]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Libra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+180b73dc6247e953be009bc0c884ecce80bb9d61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38074203eaabb4221e9ce31f10ddc1fe7e7a3b33")]
 [assembly: System.Reflection.AssemblyProductAttribute("Libra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Libra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,12 +1,9 @@
 using HealthChecks.UI.Client;
-using Libra.Services.ApiClient;
-using Libra.Services.DataBaseService;
-using Libra.Services.DictionaryService;
-using Libra.Services.HealthChecker;
-using Libra.Services.JokesService;
-using Libra.Services.RandomDataService;
-using Libra.Services.UserService;
-using Libra.Services.WordsService;
+using LitHub.Services.ApiClient;
+using LitHub.Services.DataBaseService;
+using LitHub.Services.HealthChecker;
+using LitHub.Services.RandomDataService;
+using LitHub.Services.UserService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +13,7 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
 
-namespace Libra
+namespace LitHub
 {
     public class Program
     {
@@ -35,11 +32,8 @@ namespace Libra
                 .AddDbContextCheck<DataBaseService>("database_health_check");
             builder.Services
                 .AddSingleton<IRandomDataService, RandomDataService>()
-                .AddSingleton<IUserService, UserService>()           // Сервіс додан як AddSingleton, адже сервіс повинен бути єдиним для усіх користувачів застосунку
-                .AddSingleton<IApiClient, ApiClient>()               // Сервіс виступає в ролі методів для взаємодії із HttpClient, не передбачається, що методи повинні змінюватися, тому для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddSingleton<IWordsService, WordsService>()        // Сервіс виступає в ролі зберігання єдиного списку слів та методів взаємодії із ним. Для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddSingleton<IJokesService, JokesService>()        // Сервіс виступає в ролі зберігання єдиного списку жартів та методів взаємодії із ним. Для роботи із єдиним об'єктом сервіса використовується AddSingleton
-                .AddScoped<IDictionaryService, DictionaryService>();// Сервіс використовує дані іншого сервіса, який може змінювати свій стан. Для реєстрації цих змін використовується AddScoped
+                .AddSingleton<IUserService, UserService>()
+                .AddSingleton<IApiClient, ApiClient>();
             builder.Services.AddControllers();
             builder.Services.AddHealthChecksUI(
                 o =>
@@ -131,7 +125,7 @@ namespace Libra
             app.MapHealthChecks("/user_health",
                 new HealthCheckOptions
                 {
-                    Predicate = healthCheck => healthCheck.Name == "dictionary_health_check",
+                    Predicate = healthCheck => healthCheck.Name == "user_health_check",
                     AllowCachingResponses = false,
                     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
                 });

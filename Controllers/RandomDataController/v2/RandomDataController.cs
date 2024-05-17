@@ -1,10 +1,10 @@
-﻿using Libra.Models.ResponseModels;
-using Libra.Services.RandomDataService;
+﻿using LitHub.Models.ResponseModels;
+using LitHub.Services.RandomDataService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace Libra.Controllers.RandomDataController.v2
+namespace LitHub.Controllers.RandomDataController.v2
 {
     [ApiVersion("2.0")]
     [Route("v{version:apiVersion}/[controller]")]

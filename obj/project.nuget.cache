@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AFr8aYNzytxHrxHBFSZZNl3QyrlTpfQMUZDokne0U+l93xhP/GhlhFAQvHFfQwMPEaWJjtkOTMUMmNXOGbGMJQ==",
+  "dgSpecHash": "iMwg4AGvG2RqkLB3DAPY+4xpGadS4Y3L57XtXf3B6vXQb1n6+HGyS4+BmNC4fcFDOiWCFhzhWSAMtUMwuCTRIg==",
   "success": true,
-  "projectFilePath": "E:\\uni\\WEB\\LitHub\\Libra.csproj",
+  "projectFilePath": "E:\\uni\\WEB\\LitHub\\LitHub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aomik\\.nuget\\packages\\aspnetcore.healthchecks.ui\\8.0.0\\aspnetcore.healthchecks.ui.8.0.0.nupkg.sha512",
     "C:\\Users\\aomik\\.nuget\\packages\\aspnetcore.healthchecks.ui.client\\8.0.0\\aspnetcore.healthchecks.ui.client.8.0.0.nupkg.sha512",
