@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "E:\\uni\\WEB\\LitHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\booksservice\\booksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\booksservice\\booksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\booksservice\\ibooksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\booksservice\\ibooksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,12 +11,36 @@
       "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:dtos\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\models\\homonymsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:models\\homonymsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\apiclient\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\apiclient\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\apiclient\\iapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\apiclient\\iapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\booksservice\\booksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\booksservice\\booksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\booksservice\\ibooksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\booksservice\\ibooksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\myapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:myapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +50,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\ApiClient\\ApiClient.cs",
+              "RelativeDocumentMoniker": "Services\\ApiClient\\ApiClient.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\ApiClient\\ApiClient.cs",
+              "RelativeToolTip": "Services\\ApiClient\\ApiClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T13:33:46.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IApiClient.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\ApiClient\\IApiClient.cs",
+              "RelativeDocumentMoniker": "Services\\ApiClient\\IApiClient.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\ApiClient\\IApiClient.cs",
+              "RelativeToolTip": "Services\\ApiClient\\IApiClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T13:33:44.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-18T13:33:26.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MyApp.http",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\MyApp.http",
+              "RelativeDocumentMoniker": "MyApp.http",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\MyApp.http",
+              "RelativeToolTip": "MyApp.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-05-18T13:33:21.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IBooksService.cs",
               "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\BooksService\\IBooksService.cs",
               "RelativeDocumentMoniker": "Services\\BooksService\\IBooksService.cs",
@@ -51,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "HomonymsData.cs",
               "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Models\\HomonymsData.cs",
               "RelativeDocumentMoniker": "Models\\HomonymsData.cs",
@@ -64,20 +132,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "BooksController.cs",
               "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
               "ToolTip": "E:\\uni\\WEB\\LitHub\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Controllers\\BooksController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAiwDcAAAA5AAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwB8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T16:35:23.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "BookDTO.cs",
               "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\DTOs\\BookDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\BookDTO.cs",
@@ -90,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "BooksService.cs",
               "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\BooksService\\BooksService.cs",
               "RelativeDocumentMoniker": "Services\\BooksService\\BooksService.cs",
@@ -103,13 +171,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\uni\\WEB\\LitHub\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T14:38:45.92Z",
               "EditorCaption": ""

@@ -56,7 +56,7 @@ namespace MyApp.Controllers
                 var book = _booksService.GetRandomBook();
                 response.StatusCode = HttpStatusCode.OK;
                 response.Data = book;
-                response.Message = $"Your word is {book.Trim().ToLower()}";
+                response.Message = $"Your book is {book.Trim().ToLower()}";
                 return StatusCode((int)response.StatusCode, response);
             }
             catch
@@ -84,24 +84,24 @@ namespace MyApp.Controllers
         }
         //API додання слова до статичного списку (Дані із серверу)
         [HttpPost()]
-        public async Task<ActionResult> PostBook([FromBody] BookDTO wordDTO)
+        public async Task<ActionResult> PostBook([FromBody] BookDTO bookDTO)
         {
             try
             {
                 var response = new BaseResponse<string>();
-                if (!_booksService.ValidateBook(wordDTO.Book))
+                if (!_booksService.ValidateBook(bookDTO.Book))
                 {
                     response.Message = "Invalid data";
                     response.StatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(response);
                 }
-                if (_booksService.AddBook(wordDTO.Book))
+                if (_booksService.AddBook(bookDTO.Book))
                 {
                     response.Message = "Data received successfully";
                     response.StatusCode = HttpStatusCode.OK;
                     return Ok(response);
                 }
-                response.Message = "The word already exists.";
+                response.Message = "The book already exists.";
                 response.StatusCode = HttpStatusCode.BadRequest;
                 return BadRequest(response);
             }
@@ -111,7 +111,7 @@ namespace MyApp.Controllers
             }
         }
         //API додання видалення статичного списку (Дані із серверу)
-        [HttpDelete("{word}")]
+        [HttpDelete("{book}")]
         public async Task<ActionResult> DeleteBook(string book)
         {
             try
@@ -125,7 +125,7 @@ namespace MyApp.Controllers
                 }
                 if (_booksService.RemoveBook(book))
                 {
-                    response.Message = $"Word '{book.Trim().ToLower()}' was deleted successfully.";
+                    response.Message = $"Book '{book.Trim().ToLower()}' was deleted successfully.";
                     response.StatusCode = HttpStatusCode.OK;
                     return Ok(response);
                 }
@@ -139,25 +139,25 @@ namespace MyApp.Controllers
             }
         }
         //API зміни елементу зі статичного списку (Дані із серверу)
-        [HttpPut("{oldWord}")]
-        public IActionResult ChangeWord(string oldWord, [FromBody] BookDTO wordDTO)
+        [HttpPut("{oldBook}")]
+        public IActionResult ChangeBook(string oldBook, [FromBody] BookDTO bookDTO)
         {
             try
             {
                 var response = new BaseResponse<string>();
-                if (!_booksService.ValidateBook(wordDTO.Book))
+                if (!_booksService.ValidateBook(bookDTO.Book))
                 {
                     response.Message = "Invalid data";
                     response.StatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(response);
                 }
-                if (_booksService.ReplaceBook(oldWord, wordDTO.Book))
+                if (_booksService.ReplaceBook(oldBook, bookDTO.Book))
                 {
-                    response.Message = $"Word '{oldWord.Trim().ToLower()}' changed to '{wordDTO.Book.Trim().ToLower()}' successfully.";
+                    response.Message = $"Book '{oldBook.Trim().ToLower()}' changed to '{bookDTO.Book.Trim().ToLower()}' successfully.";
                     response.StatusCode = HttpStatusCode.OK;
                     return Ok(response);
                 }
-                response.Message = $"There is no '{oldWord.Trim().ToLower()}' in list.";
+                response.Message = $"There is no '{oldBook.Trim().ToLower()}' in list.";
                 response.StatusCode = HttpStatusCode.NotFound;
                 return NotFound(response);
             }
