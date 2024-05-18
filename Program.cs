@@ -2,7 +2,7 @@
 
 class Program
 {
-    static string fileName = "LoremIpsum.txt";
+    static string fileName = "NewFileTxt.txt";
     static void Main()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -11,8 +11,8 @@ class Program
         {
             Console.WriteLine("Menu:");
             Console.WriteLine("1. Word Count");
-            Console.WriteLine("2. Calc Expression");
-            Console.WriteLine("0. Exit");
+            Console.WriteLine("2. Calculator Expression");
+            Console.WriteLine("0. Quit");
 
             Console.Write("Input:");
             if (int.TryParse(Console.ReadLine(), out int choice))
@@ -28,7 +28,7 @@ class Program
                         break;
 
                     case 0:
-                        Console.WriteLine("Have a nice day. Bye!");
+                        Console.WriteLine("Goodbye");
                         return;
 
                     default:
@@ -49,25 +49,25 @@ class Program
     static void EvaluateMathExpression()
     {
         System.Data.DataTable table = new System.Data.DataTable();
-        Console.Write("Input math expr:");
+        Console.Write("Input math expression:");
 
         string? expression = Console.ReadLine();
 
         try
         {
             double result = Convert.ToDouble(table.Compute(expression, string.Empty));
-            Console.WriteLine($"Result: {result}");
+            Console.WriteLine($"Result is: {result}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Something is wrong: {ex.Message}");
+            Console.WriteLine($"Something is went wrong: {ex.Message}");
         }
     }
 
     //2
     static void GetWordCount()
     {
-        Console.Write("Write text:");
+        Console.Write("Write text here:");
         string? text = Console.ReadLine();
 
         MatchCollection matches = Regex.Matches(text, "[a-zA-Z0-9]");
