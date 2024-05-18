@@ -1,12 +1,224 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\uni\\WEB\\LitHub\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\controllers\\mangascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:controllers\\mangascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\mangaservice\\mangasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\mangaservice\\mangasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\dtos\\mangadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:dtos\\mangadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\models\\mangadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:models\\mangadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\mangaservice\\imangasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\mangaservice\\imangasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\services\\booksservice\\booksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:services\\booksservice\\booksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\dtos\\definitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:dtos\\definitiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\models\\responsemodels\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:models\\responsemodels\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\models\\librarydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:models\\librarydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|e:\\uni\\web\\lithub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701155D4-7BF3-4F10-A150-005FC762E8C4}|MyApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MangaData.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Models\\MangaData.cs",
+              "RelativeDocumentMoniker": "Models\\MangaData.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Models\\MangaData.cs",
+              "RelativeToolTip": "Models\\MangaData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:20:06.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MangasService.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\MangaService\\MangasService.cs",
+              "RelativeDocumentMoniker": "Services\\MangaService\\MangasService.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\MangaService\\MangasService.cs",
+              "RelativeToolTip": "Services\\MangaService\\MangasService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:17:24.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMangasService.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\MangaService\\IMangasService.cs",
+              "RelativeDocumentMoniker": "Services\\MangaService\\IMangasService.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\MangaService\\IMangasService.cs",
+              "RelativeToolTip": "Services\\MangaService\\IMangasService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:17:24.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BooksService.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Services\\BooksService\\BooksService.cs",
+              "RelativeDocumentMoniker": "Services\\BooksService\\BooksService.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Services\\BooksService\\BooksService.cs",
+              "RelativeToolTip": "Services\\BooksService\\BooksService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:06:44.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MangaDto.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\DTOs\\MangaDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\MangaDto.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\DTOs\\MangaDto.cs",
+              "RelativeToolTip": "DTOs\\MangaDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:04:52.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseResponse.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Models\\ResponseModels\\BaseResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ResponseModels\\BaseResponse.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Models\\ResponseModels\\BaseResponse.cs",
+              "RelativeToolTip": "Models\\ResponseModels\\BaseResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:04:50.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LibraryData.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Models\\LibraryData.cs",
+              "RelativeDocumentMoniker": "Models\\LibraryData.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Models\\LibraryData.cs",
+              "RelativeToolTip": "Models\\LibraryData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:04:47.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DefinitionDto.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\DTOs\\DefinitionDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\DefinitionDto.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\DTOs\\DefinitionDto.cs",
+              "RelativeToolTip": "DTOs\\DefinitionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:04:38.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "Controllers\\BooksController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAiwFUAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:03:41.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MangasController.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Controllers\\MangasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MangasController.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Controllers\\MangasController.cs",
+              "RelativeToolTip": "Controllers\\MangasController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACAAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:03:18.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LibraryController.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Controllers\\LibraryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LibraryController.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Controllers\\LibraryController.cs",
+              "RelativeToolTip": "Controllers\\LibraryController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAqwC8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:02:51.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\uni\\WEB\\LitHub\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\uni\\WEB\\LitHub\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:02:45.176Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

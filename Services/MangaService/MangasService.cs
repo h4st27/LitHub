@@ -4,16 +4,15 @@
     {
         private readonly HashSet<string> mangas = new HashSet<string>
         {
-            "Shingeki no Kyojin",
-            "Jujutsu Kaisen",
+            "ShingekiNoKyojin",
+            "JujutsuKaisen",
             "Naruto",
             "Bleach",
-            "Byousoku 5 Centimeter",
-            "Kage no Jitsuryokusha ni Naritakute!",
-            "Tate no Yuusha no Nariagari",
-            "Boku dake ga Inai Machi",
-            "Tenki no Ko",
-            "Yuukoku no Moriarty"
+            "KageNoJitsuryokushaNiNaritakute!",
+            "TateNoYuushaNoNariagari",
+            "BokuDakeGaInaiMachi",
+            "TenkiNoKo",
+            "YuukokuNoMoriarty"
         };
         private Random rand = new Random();
 

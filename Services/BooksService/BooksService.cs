@@ -5,9 +5,9 @@
         private string pattern = "^[a-zA-Z]+$";
         private HashSet<string> books = new HashSet<string>
         {
-            "Harry Potter", "Lord of the Rings", "The Blade Itself", "Witcher", "It",
-            "If We Were Villains", "A Little Life", "The Little Prince", "Looking for Alaska", "Atomic Habits",
-            "Barbie", "Happy Place", "Be Happy", "Have a Good Time", "Everything I Know About Love"
+            "HarryPotter", "LordOfTheRings", "TheBladeItself", "Witcher", "It",
+            "IfWeWereVillains", "ALittleLife", "TheLittlePrince", "Lookingfor Alaska", "AtomicHabits",
+            "Barbie", "HappyPlace", "BeHappy", "HaveAGoodTime", "EverythingIKnowAboutLove"
         };
         private Random rand = new Random();
 

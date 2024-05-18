@@ -30,8 +30,7 @@ namespace MyApp.Controllers
             var manga = new MangaDto();
             try
             {
-                var apiData = await _apiClient.GetAsync<MangaData>($"https://api.api-ninjas.com/v1/chucknorris?&X-Api-Key={_configuration.GetSection("ApiKey").Value}");
-                response.Data = apiData;
+                manga.Manga = _mangasService.GetRandomManga();
                 response.Message = $"Your manga is '{manga.Manga}'.";
                 return Ok(response);
             }

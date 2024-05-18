@@ -75,7 +75,7 @@ namespace MyApp.Controllers
         }
 
         [HttpPost()]
-        public async Task<ActionResult> PostWord([FromBody] BookDTO book)
+        public async Task<ActionResult> PostBook([FromBody] BookDTO book)
         {
             try
             {

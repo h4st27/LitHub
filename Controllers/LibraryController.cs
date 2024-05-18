@@ -39,13 +39,13 @@ namespace MyApp.Controllers
             }
         }
         [HttpGet()]
-        public async Task<ActionResult> GetDictionary()
+        public async Task<ActionResult> GetLibrary()
         {
             var response = new BaseResponse<List<LibraryData>>();
             try
             {
                 response.Data = _libraryService.GetLibrary();
-                response.Message = $"Your dictionary.";
+                response.Message = $"Your library.";
                 return Ok(response);
             }
             catch
