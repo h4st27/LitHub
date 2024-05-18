@@ -19,9 +19,8 @@ namespace LitHub
             builder.Services.AddCors();
             builder.Services
                 .AddSingleton<IRandomDataService, RandomDataService>()
-                .AddSingleton<IUserService, UserService>()           // Сервіс додан як AddSingleton, адже сервіс повинен бути єдиним для усіх користувачів застосунку
-                .AddSingleton<IApiClient, ApiClient>();              // Сервіс виступає в ролі методів для взаємодії із HttpClient, не передбачається, що методи повинні змінюватися, тому для роботи із єдиним об'єктом сервіса використовується AddSingleton
-      
+                .AddSingleton<IUserService, UserService>()
+                .AddSingleton<IApiClient, ApiClient>();
 
             builder.Services.AddApiVersioning(options =>
             {
