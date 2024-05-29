@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LitHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+940d01acc54c6f2912188dcf363f670c33368f6d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e27f54dabfe51bb575ec3e6e98ba541d59b80c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("LitHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LitHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
